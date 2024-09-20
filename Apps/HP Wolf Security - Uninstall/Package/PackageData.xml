@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageData>
+    <Application>
+        <AppManufacturer>HP</AppManufacturer>
+        <AppName>Uninstall HP Wolf Security</AppName>
+        <AppNameSuffix></AppNameSuffix>
+        <AppVersion>1.0</AppVersion>
+        <AppLanguage></AppLanguage>
+        <AppArchitecture>x64</AppArchitecture>
+        <AppDescription></AppDescription>
+        <AppOwnerName></AppOwnerName>
+        <AppOwnerEmail></AppOwnerEmail>
+        <AppOwnerPhone></AppOwnerPhone>
+        <AppSelfUpdating>false</AppSelfUpdating>
+    </Application>
+    <Package>
+        <Customer>Klein Geluk</Customer>
+        <PackageID>KLG10030</PackageID>
+        <PackageVersion>1.0</PackageVersion>
+        <PackageType></PackageType>
+        <PackageName ResolveAsCode="true">$PackageID + "_" + $appName + $(If($appNameSuffix){" $appNameSuffix"}) + "_" + $appVersion</PackageName>
+        <PackageAuthor>Conclusion PT3 Workspace Packaging</PackageAuthor>
+        <InstallCmdLine>Deploy-Application.exe -AllowRebootPassThru -DeployMode NonInteractive</InstallCmdLine>
+        <UninstallCmdLine>Deploy-Application.exe -AllowRebootPassThru -DeployMode NonInteractive -DeploymentType Uninstall</UninstallCmdLine>
+        <ReleaseFolder>.</ReleaseFolder>
+        <WinGetID></WinGetID>
+        <PreferredWingetInstallerType></PreferredWingetInstallerType>
+        <App2DateApprovalFile>..\ApprovedRelease.txt</App2DateApprovalFile>
+    </Package>
+    <Distribution>
+        <Intune>
+            <TenantName></TenantName> <!-- Mandatory -->
+            <IntuneWinFolder></IntuneWinFolder> <!-- Optional - Default is %TEMP% -->
+            <CleanupIntuneWinFile></CleanupIntuneWinFile> <!-- Optional - Default is false-->
+            <DisplayName ResolveAsCode="true">$appName + $(If($appNameSuffix){" $appNameSuffix"})</DisplayName> <!-- Mandatory - Supports use of Powershell variables based on tagnames from Application and Package and supports XML property ResolveAsCode-->
+            <Icon>Install.png</Icon> <!-- Optional - Supported filetypes: png, jpg, jpeg. Enter only the filename, Icon is always sourced from the ReleaseFolder. Supports use of Powershell variables based on tagnames from Application and Package-->
+            <Description ResolveAsCode="true">"$PackageID $PackageVersion $Now" + $(If($AppDescription){"`r`n`r`n$AppDescription"})</Description> <!-- Optional - Supports use of Powershell variables based on tagnames from Application and Package -->
+            <Owner ResolveAsCode="true">$AppOwnerName + $(If($AppOwnerEmail){" - $AppOwnerEmail"}) + $(If($AppOwnerPhone){" - $AppOwnerPhone"})</Owner>
+            <Notes>PackageID=$PackageID`r`nPackageVersion=$PackageVersion`r`nImportScriptVersion=$ScriptVersion`r`nImportDateTime=$Now</Notes>  <!-- Optional - Supports use of Powershell variables based on tagnames from Application and Package -->
+            <Developer>$PackageAuthor</Developer>
+            <InformationURL></InformationURL>
+            <PrivacyURL></PrivacyURL>
+            <InstallBehavior>system</InstallBehavior> <!-- Mandatory - Valid values are: system, user-->
+            <AllowUninstall>true</AllowUninstall> <!-- Optional, true of false, default is true-->
+            <RestartBehavior>basedOnReturnCode</RestartBehavior> <!-- Mandatory - Valid values are: basedOnReturnCode, allow, suppress, force -->
+            <Requirements> 
+                <Architecture>x64</Architecture> <!-- Mandatory - Valid values are: x86, x64, All -->
+                <MinimumOS>1903</MinimumOS> <!-- Mandatory - Valid Values are: 1607, 1703, 1709, 1803, 1809, 1903-->
+                <MinimumCPUSpeed></MinimumCPUSpeed> <!-- Optional - Speed in Mhz-->
+                <MinimumFreeDiskSpace></MinimumFreeDiskSpace> <!-- Optional - Free Diskspace in MB -->
+                <MinimumMemory></MinimumMemory> <!-- Optional - Memory in MB -->
+                <MinimumProcessors></MinimumProcessors> <!-- Optional - Number of required logical processors -->
+            </Requirements>
+            <RequirementRules></RequirementRules>
+            <DetectionRules></DetectionRules>
+            <Relations></Relations>
+            <Assignments>
+                <Assignment Enabled="true">
+                    <Intent>available</Intent> <!-- Mandatory - Valid values are: available, required, uninstall -->
+                    <Target>Group</Target> <!-- Mandatory - Valid values are: AllUsers, Group, AllDevices (AllDevices is not valid is Intent is available) -->
+                    <Group Create="true" Mode="Include">APP-$DisplayName_$AppVersion-Available-Windows-$PackageID</Group> <!-- Mandatory if Target is Group otherwise ignored. Use Create="true" to create the group if it does not exist. Valid values for mode are: Include, Exclude -->
+                    <Filter Type="ID" Mode="Exclude">$Env:InstallExclusionFilterID</Filter> <!-- Use Type="ID" and enter the ID of the filter to use. Use Type="None" to not filter the assignment. This setting is ignored if Group Mode set to Exclude. -->
+                    <Notification>showAll</Notification> <!-- Valid values are: showAll, showReboot, hideAll -->
+                    <Availability>Disabled</Availability> <!-- The value Disabled sets the assignment availability to 01-01-2099, effectively disabling the assignent. Other possible values are AsSoonAsPossible or a DateTime. The property UseDeviceTime can be added for required and uninstall intent with the values true or false, it will be ignored for available intent which only supports UTC time. -->
+                </Assignment>
+                <Assignment Enabled="true">
+                    <Intent>required</Intent> <!-- Mandatory - Valid values are: available, required, uninstall -->
+                    <Target>Group</Target> <!-- Mandatory - Valid values are: AllUsers, Group -->
+                    <Group Create="true" Mode="Include">APP-$DisplayName_$AppVersion-Required-Windows-$PackageID</Group> <!-- Mandatory if Target is Group otherwise ignored. Use Create="true" to create the group if it does not exist. Valid values for mode are: Include, Exclude -->
+                    <Filter Type="ID" Mode="Exclude">$InstallExclusionFilterID</Filter> <!-- Use Type="ID" and enter the ID of the filter to use. Use Type="None" to not filter the assignment. This setting is ignored if Group Mode set to Exclude. -->
+                    <Notification>showAll</Notification> <!-- Valid values are: showAll, showReboot, hideAll -->
+                    <Availability>Disabled</Availability> <!-- The value Disabled sets the assignment availability to 01-01-2099, effectively disabling the assignent. Other possible values are AsSoonAsPossible or a DateTime. The property UseDeviceTime can be added for required and uninstall intent with the values true or false, it will be ignored for available intent which only supports UTC time. -->
+                </Assignment>
+                <Assignment Enabled="true">
+                    <Intent>uninstall</Intent> <!-- Mandatory - Valid values are: available, required, uninstall -->
+                    <Target>Group</Target> <!-- Mandatory - Valid values are: AllUsers, Group, AllDevices (AllDevices is not valid is Intent is available) -->
+                    <Group Create="true" Mode="Include">APP-$DisplayName_$AppVersion-Uninstall-Windows-$PackageID</Group> <!-- Mandatory if Target is Group otherwise ignored. Use Create="true" to create the group if it does not exist. Valid values for mode are: Include, Exclude -->
+                    <Filter Type="None" Mode="Include">$UninstallExclusionFilterID</Filter> <!-- Use Type="ID" and enter the ID of the filter to use. Use Type="None" to not filter the assignment. This setting is ignored if Group Mode set to Exclude. -->
+                    <Notification>showAll</Notification> <!-- Valid values are: showAll, showReboot, hideAll -->
+                    <Availability>Disabled</Availability> <!-- The value Disabled sets the assignment availability to 01-01-2099, effectively disabling the assignent. Other possible values are AsSoonAsPossible or a DateTime. The property UseDeviceTime can be added for required and uninstall intent with the values true or false, it will be ignored for available intent which only supports UTC time. -->
+                </Assignment>
+                <Assignment Enabled="true">
+                    <Intent>available</Intent> <!-- Mandatory - Valid values are: available, required, uninstall -->
+                    <Target>Group</Target> <!-- Mandatory - Valid values are: AllUsers, Group, AllDevices (AllDevices is not valid is Intent is available) -->
+                    <Group Create="false" Mode="Include" AutoUninstallExclude="false">CWS-App-Test-AllUsers</Group> <!-- Mandatory if Target is Group otherwise ignored. Use Create="true" to create the group if it does not exist. Valid values for mode are: Include, Exclude -->
+                    <Filter Type="ID" Mode="Include">$Env:TestDeviceFilterID</Filter> <!-- Use Type="ID" and enter the ID of the filter to use. Use Type="None" to not filter the assignment. This setting is ignored if Group Mode set to Exclude. -->
+                    <Notification>ShowAll</Notification> <!-- Valid values are: showAll, showReboot, hideAll -->
+                    <Availability>AsSoonAsPossible</Availability> <!-- The value Disabled sets the assignment availability to 01-01-2099, effectively disabling the assignent. Other possible values are AsSoonAsPossible or a DateTime. The property UseDeviceTime can be added for required and uninstall intent with the values true or false, it will be ignored for available intent which only supports UTC time. -->
+                </Assignment>
+            </Assignments>
+        </Intune>
+    </Distribution>
+</PackageData>

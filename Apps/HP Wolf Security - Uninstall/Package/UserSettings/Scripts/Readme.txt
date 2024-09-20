@@ -1,0 +1,1 @@
+Any .cmd files placed in this folder will be executed by the Active Setup.

@@ -1,0 +1,8 @@
+@Echo Off
+Echo ************************************************************************** >> %LogFile%
+Echo %Time% %Date%: [%~n0] Start Executing command file %0 >> %LogFile%
+
+REM Place actual script contents here.
+
+
+Echo %Time% %Date%: [%~n0] End Executing command file %0 >> %LogFile%
