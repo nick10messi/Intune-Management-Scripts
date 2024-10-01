@@ -9,8 +9,7 @@ if (Test-Path -Path $credentialProvider) {
     $items = $userSIDs | Foreach-Object { Get-ItemProperty $_.PsPath }
 }
 else {
-    Write-Output "Registry path for PIN credential provider not found. Exiting script with status 1"
-    exit 1
+    Write-Output "Registry path for PIN credential provider not found."
 }
 if(-NOT[string]::IsNullOrEmpty($loggedOnUserSID)) {
 
@@ -19,46 +18,39 @@ if(-NOT[string]::IsNullOrEmpty($loggedOnUserSID)) {
 
         # LogonCredsAvailable needs to be set to 1, indicating that the credential provider is in use
         if ($items.Where({$_.PSChildName -eq $loggedOnUserSID}).LogonCredsAvailable -eq 1) {
-            Write-Output "WHfB enabled"
-            exit 0                    
+            Write-Output "WHfB enabled"                
         }
 
         # If LogonCredsAvailable is not set to 1, this will indicate that the PIN credential provider is not in use
         elseif ($items.Where({$_.PSChildName -eq $loggedOnUserSID}).LogonCredsAvailable -ne 1) {
             Write-Output "[Multiple SIDs]: Not good. PIN credential provider NOT found for LoggedOnUserSID. This indicates that the user is not enrolled into WHfB."
-            exit 1
         }
         else {
             Write-Output "[Multiple SIDs]: Something is not right about the LoggedOnUserSID and the PIN credential provider. Needs investigation."
-            exit 1
         }
     }
 
     # Looking for the SID belonging to the logged on user is slightly different if there's not mulitple SIDs found in registry
     else {
         if (($items.PSChildName -eq $loggedOnUserSID) -AND ($items.LogonCredsAvailable -eq 1)) {
-            Write-Output "WHfB enabled"
-            exit 0                    
+            Write-Output "WHfB enabled"                 
         }
         elseif (($items.PSChildName -eq $loggedOnUserSID) -AND ($items.LogonCredsAvailable -ne 1)) {
             Write-Output "[Single SID]: Not good. PIN credential provider NOT found for LoggedOnUserSID. This indicates that the user is not enrolled into WHfB."
-            exit 1
         }
         else {
             Write-Output "[Single SID]: Something is not right about the LoggedOnUserSID and the PIN credential provider. Needs investigation."
-            exit 1
         }
     }
 }
 else {
-    Write-Output "Could not retrieve SID for the logged on user. Exiting script with status 1"
-    exit 1
+    Write-Output "Could not retrieve SID for the logged on user."
 }    
 }
 
 function WHfB-FaceLogon-Capable {
     $facelogonKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\FaceLogon"
-    $facelogonName = "Capable"
+    $facelogonName = "DeviceCapable"
     
     # First, check if the key exists
     if (Test-Path $facelogonKey) {
@@ -69,7 +61,7 @@ function WHfB-FaceLogon-Capable {
         # Check if the 'Capable' property exists
         if ($capableValue.PSObject.Properties[$facelogonName]) {
             if ($capableValue.$facelogonName -eq 1) {
-                Write-Output "Device is capable for Face logon"
+                Write-Output "Face logon capable"
             } else {
                 Write-Output "Device is NOT capable for Face logon"
             }
@@ -84,7 +76,7 @@ function WHfB-FaceLogon-Capable {
 
 function WHfB-FingerprintLogon-Capable {
     $fingerprintlogonKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\FingerprintLogon"
-    $fingerprintlogonName = "Capable"
+    $fingerprintlogonName = "DeviceCapable"
     
     # First, check if the key exists
     if (Test-Path $fingerprintlogonKey) {
@@ -95,7 +87,7 @@ function WHfB-FingerprintLogon-Capable {
         # Check if the 'Capable' property exists
         if ($capableValue.PSObject.Properties[$fingerprintlogonName]) {
             if ($capableValue.$fingerprintlogonName -eq 1) {
-                Write-Output "Device is capable for Fingerprint logon"
+                Write-Output "Fingerprint logon capable"
             } else {
                 Write-Output "Device is NOT capable for Fingerprint logon"
             }
@@ -108,14 +100,95 @@ function WHfB-FingerprintLogon-Capable {
 }
 
 function WHfB-FaceLogon-Active {
+    # Getting the logged on user's SID
+    $loggedOnUserSID = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).User.Value
+
     $facelogonActiveKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\FaceLogonEnrolledUsers"
-    $facelogonActiveName = "Capable"
+    $facelogonActiveName = $loggedOnUserSID
+
+    # First, check if the key exists
+    if (Test-Path $facelogonActiveKey) {
+
+        # Try to retrieve the regproperty of the 'SID' property if it exists
+        $facevalue = Get-ItemProperty -Path $facelogonActiveKey -ErrorAction SilentlyContinue
+    
+        # Check if the 'SID' property exists
+        if ($facevalue.PSObject.Properties[$facelogonActiveName]) {
+            if ($facevalue.$facelogonActiveName -eq 0) {
+                Write-Output "Face Logon active"
+            } else {
+                Write-Output "Face Logon NOT active"
+            }
+        } else {
+            Write-Output "'SID' property does not exist. Face logon NOT active."
+        }
+    } else {
+        Write-Output "Face Logon registry key not found. Face logon NOT active."
+    }
 }
 
-# Determine Windows Hello for Business status
-if ((((WHfB-Enabled-Logged-In-User) -eq "WHfB enabled") -AND ((WHfB-FaceLogon-Capable) -eq "Device is capable for Face logon")) -AND (WHfB-FingerprintLogon-Capable) -eq "Device is capable for Fingerprint logon") {
-    Write-Output "WHfB Enabled + face and finger capable"
+function WHfB-Fingerprint-Active {
+    # Getting the logged on user's SID
+    $loggedOnUserSID = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).User.Value
+
+    $fingerprintlogonActiveKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\FingerprintLogonEnrolledUsers"
+    $fingerprintActiveName = $loggedOnUserSID
+
+    # First, check if the key exists
+    if (Test-Path $fingerprintlogonActiveKey) {
+
+        # Try to retrieve the regproperty of the 'SID' property if it exists
+        $fingerprintvalue = Get-ItemProperty -Path $fingerprintlogonActiveKey -ErrorAction SilentlyContinue
+    
+        # Check if the 'SID' property exists
+        if ($fingerprintvalue.PSObject.Properties[$fingerprintActiveName]) {
+            if ($fingerprintvalue.$fingerprintActiveName -eq 0) {
+                Write-Output "Fingerprint Logon active"
+            } else {
+                Write-Output "Fingerprint Logon NOT active"
+            }
+        } else {
+            Write-Output "'SID' property does not exist. Fingerprint logon NOT active."
+        }
+    } else {
+        Write-Output "Fingerprint logon registry key not found. Fingerprint logon NOT active"
+    } 
 }
-elseif (<#condition#>) {
-    <# Action when this condition is true #>
+
+# Check if WHfB is enabled
+if ((WHfB-Enabled-Logged-In-User) -eq "WHfB enabled") {
+    Write-Output "WHfB is enabled."
+} else {
+    Write-Output "WHfB is not enabled."
+    exit 0
+}
+
+# If neither face nor fingerprint are capable
+if ((WHfB-FaceLogon-Capable) -ne "Face logon capable" -and (WHfB-FingerprintLogon-Capable) -ne "Fingerprint logon capable") {
+    Write-Output "WHfB is enabled, but the device is not capable of either face logon nor fingerprint"
+    exit 0
+}
+
+# If face is capable but not configured
+if ((WHfB-FaceLogon-Capable) -eq "Face logon capable" -and (WHfB-FaceLogon-Active) -ne "Face logon active") {
+    Write-Output "WHfB is enabled, the device is capable for face logon, but hasn't face logon configured"
+    exit 1
+}
+
+# If face is capable and configured
+if ((WHfB-FaceLogon-Capable) -eq "Face logon capable" -and (WHfB-FaceLogon-Active) -eq "Face logon active") {
+    Write-Output "WHfB is enabled, the device is capable for face logon, and has face logon configured"
+    exit 0
+}
+
+# If fingerprint is capable but not configured
+if ((WHfB-FingerprintLogon-Capable) -eq "Fingerprint logon capable" -and (WHfB-Fingerprint-Active) -ne "Fingerprint logon active") {
+    Write-Output "WHfB is enabled, the device is capable for fingerprint logon, but hasn't fingerprint logon configured."
+    exit 1
+}
+
+# If fingerprint is capable and configured
+if ((WHfB-FingerprintLogon-Capable) -eq "Fingerprint logon capable" -and (WHfB-Fingerprint-Active) -eq "Fingerprint logon active") {
+    Write-Output "WHfB is enabled, the device is capable for fingerprint logon, and has fingerprint logon configured."
+    exit 0
 }
