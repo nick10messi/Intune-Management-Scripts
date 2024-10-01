@@ -75,28 +75,15 @@ function WHfB-FaceLogon-Capable {
 }
 
 function WHfB-FingerprintLogon-Capable {
-    $fingerprintlogonKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\FingerprintLogon"
-    $fingerprintlogonName = "DeviceCapable"
-    
-    # First, check if the key exists
-    if (Test-Path $fingerprintlogonKey) {
+    $fingerprintlogonDetection = Get-PnpDevice -class "biometric" | Select-Object FriendlyName -ExpandProperty FriendlyName
 
-        # Try to retrieve the value of 'Capable' if it exists
-        $capableValue = Get-ItemProperty -Path $fingerprintlogonKey -ErrorAction SilentlyContinue
-    
-        # Check if the 'Capable' property exists
-        if ($capableValue.PSObject.Properties[$fingerprintlogonName]) {
-            if ($capableValue.$fingerprintlogonName -eq 1) {
-                Write-Output "Fingerprint logon capable"
-            } else {
-                Write-Output "Device is NOT capable for Fingerprint logon"
-            }
-        } else {
-            Write-Output "'Capable' property does not exist. Device does not support Fingerprint logon."
-        }
-    } else {
-        Write-Output "Fingerprint logon registry key not found."
-    } 
+    # Check if Fingerprint device has Fingerprint sensor
+    if (($fingerprintlogonDetection) -like "*Fingerprint*") {
+        Write-Output "Fingerprint logon capable"
+    }
+    else {
+        Write-Output "Device is NOT capable for Fingerprint logon"
+    }
 }
 
 function WHfB-FaceLogon-Active {
