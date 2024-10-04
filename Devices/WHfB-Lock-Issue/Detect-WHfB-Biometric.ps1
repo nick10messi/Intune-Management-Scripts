@@ -75,7 +75,7 @@ function WHfB-FaceLogon-Capable {
 }
 
 function WHfB-FingerprintLogon-Capable {
-    $fingerprintlogonDetection = Get-PnpDevice -class "biometric" | Select-Object FriendlyName -ExpandProperty FriendlyName
+    $fingerprintlogonDetection = Get-PnpDevice -class "biometric" -ErrorAction SilentlyContinue6 | Select-Object FriendlyName -ExpandProperty FriendlyName
 
     # Check if Fingerprint device has Fingerprint sensor
     if (($fingerprintlogonDetection) -like "*Fingerprint*") {
