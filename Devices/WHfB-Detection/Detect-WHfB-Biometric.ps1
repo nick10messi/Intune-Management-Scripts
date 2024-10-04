@@ -118,7 +118,7 @@ function WHfB-Fingerprint-Active {
     # Getting the logged on user's SID
     $loggedOnUserSID = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).User.Value
 
-    $fingerprintlogonActiveKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\FingerprintLogonEnrolledUsers"
+    $fingerprintlogonActiveKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\UserTile"
     $fingerprintActiveName = $loggedOnUserSID
 
     # First, check if the key exists
@@ -129,7 +129,7 @@ function WHfB-Fingerprint-Active {
     
         # Check if the 'SID' property exists
         if ($fingerprintvalue.PSObject.Properties[$fingerprintActiveName]) {
-            if ($fingerprintvalue.$fingerprintActiveName -eq 0) {
+            if ($fingerprintvalue.$fingerprintActiveName -eq "{BEC09223-B018-416D-A0AC-523971B639F5}") {
                 Write-Output "Fingerprint Logon active"
             } else {
                 Write-Output "Fingerprint Logon NOT active"
