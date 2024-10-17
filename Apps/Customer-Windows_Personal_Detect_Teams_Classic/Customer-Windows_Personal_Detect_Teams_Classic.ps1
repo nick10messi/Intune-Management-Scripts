@@ -1,10 +1,10 @@
-$app = Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -like "Teams Machine-Wide Installer"} | select-object name -ExpandProperty name
+$app = Get-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Teams" -ErrorAction SilentlyContinue | Select-Object DisplayName -ExpandProperty DisplayName
 
-if ($app -eq "Teams Machine-Wide Installer") {
-    Write-output "Old Teams installed"
+if ($app -eq "Microsoft Teams classic") {
+    Write-Output "Classic Teams installed"
     exit 1
 }
 else {
-    Write-output "Old Teams not installed"
+    Write-Output "NO Classic Teams"
     exit 0
 }
