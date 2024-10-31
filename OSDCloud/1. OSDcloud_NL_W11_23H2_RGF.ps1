@@ -72,8 +72,6 @@ else {
 Start-Transcript -path "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Start-CustomerConfig.log" -append
 
 Write-output "========================================================================="
-Write-output "Starting Windows Update Driver"
-Start-WindowsUpdateDriver
 Write-output "Done"
 
 #Move folders
@@ -502,11 +500,12 @@ $Global:MyOSDCloud = [ordered]@{
     Version                     = [Version](Get-Module -Name OSD -ListAvailable | Sort-Object Version -Descending | Select-Object -First 1).Version
     WindowsDefenderUpdate       = $true
     WindowsUpdate               = $true
-    WindowsUpdateDrivers        = $true
+    WindowsUpdateDrivers        = $null
     WindowsImage                = $null
     WindowsImageCount           = $null
     ZTI                         = [bool]$true
 }
+
 
 #Only for HP devices we make use of HPIA
 if ($Manufacturer -eq 'HP') {
@@ -555,7 +554,6 @@ if ($indexToRemove -ne -1) {
 # Locate the lines where extra content needs to be inserted
 $indexLine1 = $scriptContent.IndexOf('$ModulePath = (Get-ChildItem -Path "$($Env:ProgramFiles)\WindowsPowerShell\Modules\osd" | Where-Object {$_.Attributes -match "Directory"} | select -Last 1).fullname')
 $indexLine2 = $scriptContent.IndexOf("Restart-Computer -Force")
-$indexLine3 = $scriptContent.IndexOf("Start-WindowsUpdateDriver")
 
 # Define the additional context to be added
 $extraContext1 = @(
