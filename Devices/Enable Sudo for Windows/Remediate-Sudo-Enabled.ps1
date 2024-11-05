@@ -3,6 +3,5 @@ $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Sudo"
 $registryName = "Enabled"
 $registryValue = 3
 
-New-Item -Path $registryPath -Force | Out-Null
-Set-ItemProperty -Path $registryPath -Name $registryName -Value $registryValue
+Set-ItemProperty -Path $registryPath -Name $registryName -Value $registryValue -Force
 Write-Output "Sudo has been enabled."
