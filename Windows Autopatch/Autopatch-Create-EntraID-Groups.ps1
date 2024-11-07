@@ -26,9 +26,6 @@ The membership rule used to define the criteria for membership in a dynamic grou
 #>
 
 
-#Modules
-#Requires -modules  @{ ModuleName="Microsoft.Graph.Authentication"; RequiredVersion="2.23.0"},@{ ModuleName="Microsoft.Graph.Groups"; RequiredVersion="2.23.0"}
-
 # Function to create a static group if it doesn't already exist
 function New-StaticGroup {
     param (
