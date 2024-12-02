@@ -28,10 +28,6 @@ Set-UserToDevicesGroups -UserGroupDisplayName 'All Users' -DeviceGroupDisplayNam
 This command updates the membership of the `CWS-Windows_Personal_Autopatch_Production_Devices` group based on the users in the `All Users` group, excluding members of the specified excluded groups.
 #>
 
-#modules
-#Requires -modules  @{ ModuleName="Microsoft.Graph.Authentication"; RequiredVersion="2.24.0"},@{ ModuleName="Microsoft.Graph.Groups"; RequiredVersion="2.24.0"},@{ ModuleName="Microsoft.Graph.DeviceManagement"; RequiredVersion="2.24.0"},@{ ModuleName="Microsoft.Graph.Users"; RequiredVersion="2.24.0"},@{ ModuleName="Microsoft.Graph.Identity.DirectoryManagement"; RequiredVersion="2.24.0"},@{ ModuleName="Microsoft.Graph.Beta.DeviceManagement"; RequiredVersion="2.24.0"}
-
-
 # Connect to Microsoft Graph
 try {
     Connect-MgGraph -Identity -ContextScope Process -ErrorAction Stop
