@@ -18,14 +18,14 @@ foreach ($App in $Apps) {
         if ($App.assignments.id -like "acacacac-9df4-4c7d-9d50-4ef0226f57a9*") {
             $ExportData += [PSCustomObject]@{
                 AppName     = $AppName
-                Assignment  = "Required"
+                Assignment  = "Available"
                 GroupName   = "All Users (Built-in Group)"
             }
         }
         if ($App.assignments.id -like "adadadad-808e-44e2-905a-0b7873a8a531*") {
             $ExportData += [PSCustomObject]@{
                 AppName     = $AppName
-                Assignment  = "Required"
+                Assignment  = "Available"
                 GroupName   = "All Devices (Built-in Group)"
             }
         }
