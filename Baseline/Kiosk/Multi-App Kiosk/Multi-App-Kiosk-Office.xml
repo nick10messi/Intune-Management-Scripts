@@ -3,20 +3,24 @@
     xmlns:rs5="http://schemas.microsoft.com/AssignedAccess/201810/config"
     xmlns:win11="http://schemas.microsoft.com/AssignedAccess/2022/config">
     <Profiles>
-        <Profile Id="{9A2A490F-10F6-4764-974A-43B19E722C23}">
+        <Profile Id="{decfc75f-c435-4eaa-9fb1-b252d564096c}">
             <AllAppsList>
                 <AllowedApps>
                     <App DesktopAppPath="%ProgramFiles(x86)%\Microsoft\Edge\Application\msedge.exe" />
                     <App AppUserModelId="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" />
-                    <App AppUserModelId="MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App" />
+                    <App DesktopAppPath="%ProgramFiles%\Microsoft Office\root\Office16\WINWORD.EXE" />
+                    <App DesktopAppPath="%ProgramFiles%\Microsoft Office\root\Office16\EXCEL.EXE" />
+                    <App DesktopAppPath="%ProgramFiles%\Microsoft Office\root\Office16\POWERPNT.EXE" />
                 </AllowedApps>
             </AllAppsList>
             <win11:StartPins>
-<![CDATA[
+<![CDATA[1
 { "pinnedList":[
 {"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Edge.lnk"},
-{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\File Explorer.lnk"},
-{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Settings.url"}
+{"packagedAppId":"windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"},
+{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Word.lnk"},
+{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Excel.lnk"},
+{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint.lnk"}
 ] }
 ]]></win11:StartPins>
             <Taskbar ShowTaskbar="true" />
@@ -24,8 +28,8 @@
     </Profiles>
     <Configs>
         <Config>
-            <AutoLogonAccount rs5:DisplayName="Servicedesk Wallboard"/>
-            <DefaultProfile Id="{9A2A490F-10F6-4764-974A-43B19E722C23}" />
+            <AutoLogonAccount rs5:DisplayName="Kiosk MS Office"/>
+            <DefaultProfile Id="{decfc75f-c435-4eaa-9fb1-b252d564096c}" />
         </Config>
     </Configs>
 </AssignedAccessConfiguration>
