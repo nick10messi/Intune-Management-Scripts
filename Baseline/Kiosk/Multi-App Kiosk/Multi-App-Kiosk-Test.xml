@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssignedAccessConfiguration xmlns="http://schemas.microsoft.com/AssignedAccess/2017/config"
+    xmlns:rs5="http://schemas.microsoft.com/AssignedAccess/201810/config"
+    xmlns:win11="http://schemas.microsoft.com/AssignedAccess/2022/config">
+    <Profiles>
+        <Profile Id="{9A2A490F-10F6-4764-974A-43B19E722C23}">
+            <AllAppsList>
+                <AllowedApps>
+                    <App DesktopAppPath="%ProgramFiles(x86)%\Microsoft\Edge\Application\msedge.exe" />
+                    <App AppUserModelId="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" />
+                    <App AppUserModelId="MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App" />
+                </AllowedApps>
+            </AllAppsList>
+            <win11:StartPins>
+<![CDATA[
+{ "pinnedList":[
+{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Edge.lnk"},
+{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\File Explorer.lnk"},
+{"desktopAppLink":"%ALLUSERSPROFILE%\\Microsoft\\Windows\\Start Menu\\Programs\\Settings.url"}
+] }
+]]></win11:StartPins>
+            <Taskbar ShowTaskbar="true" />
+        </Profile>
+    </Profiles>
+    <Configs>
+        <Config>
+            <AutoLogonAccount rs5:DisplayName="Servicedesk Wallboard"/>
+            <DefaultProfile Id="{9A2A490F-10F6-4764-974A-43B19E722C23}" />
+        </Config>
+    </Configs>
+</AssignedAccessConfiguration>
