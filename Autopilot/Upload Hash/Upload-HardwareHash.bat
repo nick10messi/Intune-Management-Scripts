@@ -1,0 +1,1 @@
+powershell.exe -executionpolicy unrestricted -file "%cd%\Upload-HardwareHash.ps1"
