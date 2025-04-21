@@ -27,3 +27,18 @@ function Write-Log {
 # Start logging
 Write-Log -Message "Script execution started."
 
+$serviceName = "sshd"
+
+try {
+    $service = Get-CimInstance -ClassName Win32_Service -Filter "Name='$serviceName'" -ErrorAction SilentlyContinue
+    if ($service.StartMode -ne "Disabled") {
+        Write-Log -Message "$serviceName is not Disabled"
+        exit 1
+    } else {
+        Write-Log -Message "$serviceName is correctly set to Disabled"
+        exit 0
+    }
+} catch {
+    Write-Log -Message "Service $serviceName not found or error occurred: $_" -Level "ERROR"
+    exit 0
+}

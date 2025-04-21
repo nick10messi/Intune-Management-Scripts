@@ -27,3 +27,13 @@ function Write-Log {
 # Start logging
 Write-Log -Message "Script execution started."
 
+# Ensure 'OpenSSH SSH Server (sshd)' is set to 'Disabled'
+$serviceName = "sshd"
+
+try {
+    $service = Get-Service -Name $serviceName -ErrorAction SilentlyContinue
+    Set-Service -Name $serviceName -StartupType Disabled -ErrorAction SilentlyContinue
+    Write-Log -Message "Set $serviceName to Disabled"
+} catch {
+    Write-Log -Message "Service $serviceName not found or error occurred: $_"
+}
