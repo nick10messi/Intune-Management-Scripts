@@ -4,10 +4,6 @@
 
 .SYNOPSIS
     This script configures all the required CIS 3.0.1 L2 Custom Settings which cannot be deployed with the Intune Settings Catalog.
-
-.VERSION HISTORY
-    v1.0.0 - [DD-MM-YYYY] Initial version
-    v1.0.1 - [DD-MM-YYYY] ...
 #>
 
 # Define constants and variables
