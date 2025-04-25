@@ -1,3 +1,0 @@
-%ProgramFiles%\Microsoft Office\root\Office16
-
-WINWORD.EXE
