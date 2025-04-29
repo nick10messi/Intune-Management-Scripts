@@ -19,7 +19,7 @@ Start-Transcript -Path "$Logdir\$LogFile"
 ###################################################################
 
 $xml = ".\Restart IME service.xml"
-$Taskname = "CWS - Restart IME service at network connection"
+$Taskname = "Restart IME service at network connection"
 
 try {
     if (-NOT (Get-ScheduledTask -TaskName $Taskname -ErrorAction SilentlyContinue)) {

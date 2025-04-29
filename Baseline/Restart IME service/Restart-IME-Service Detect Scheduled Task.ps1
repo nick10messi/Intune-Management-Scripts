@@ -1,4 +1,4 @@
-$Taskname = "CWS - Restart IME service at network connection"
+$Taskname = "Restart IME service at network connection"
 $taskExists = Get-ScheduledTask | Where-Object {$_.TaskName -like $Taskname}
 
 if($taskExists) {

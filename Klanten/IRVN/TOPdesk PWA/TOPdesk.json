@@ -1,0 +1,8 @@
+[
+    {
+      "url": "https://support.irvn.nl/tas/public/ssp/",
+      "custom_name": "TOPdesk",
+      "create_desktop_shortcut": false,
+      "default_launch_container": "window"
+    }
+  ]

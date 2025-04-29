@@ -1,4 +1,4 @@
-$Taskname = "CWS - Restart IME service at network connection"
+$Taskname = "Restart IME service at network connection"
 
 try {
     if (Get-ScheduledTask -TaskName $Taskname -ErrorAction SilentlyContinue) {
