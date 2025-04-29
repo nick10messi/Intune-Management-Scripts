@@ -1,5 +1,5 @@
 <Configuration ID="f3cdabcd-1456-45db-9bfa-a681eb18b7ef">
-  <Add OfficeClientEdition="64" Channel="Current" MigrateArch="TRUE">
+  <Add OfficeClientEdition="32" Channel="Current" MigrateArch="TRUE">
     <Product ID="O365ProPlusRetail">
       <Language ID="nl-nl" />
       <ExcludeApp ID="Groove" />
