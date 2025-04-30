@@ -8,11 +8,11 @@ Version="1">
     <CustomTaskbarLayoutCollection>
         <defaultlayout:TaskbarLayout>
             <taskbar:TaskbarPinList>
-                <taskbar:DesktopApp DesktopApplicationID="MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App" />
-                <taskbar:DesktopApp DesktopApplicationID="Microsoft.OutlookForWindows_8wekyb3d8bbwe!Microsoft.OutlookforWindows" />
-                <taskbar:DesktopApp DesktopApplicationID="MSTeams_8wekyb3d8bbwe!MSTeams" />
-                <taskbar:DesktopApp DesktopApplicationID="Citrix.Workspace" />
-                <taskbar:DesktopApp DesktopApplicationLinkPath="%AppData%\Microsoft\Windows\Start Menu\Programs\Nijmegen.lnk" />                
+                <taskbar:DesktopApp DesktopApplicationID="MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App" PinGeneration="1"/>
+                <taskbar:DesktopApp DesktopApplicationID="Microsoft.OutlookForWindows_8wekyb3d8bbwe!Microsoft.OutlookforWindows" PinGeneration="1"/>
+                <taskbar:DesktopApp DesktopApplicationID="MSTeams_8wekyb3d8bbwe!MSTeams" PinGeneration="1"/>
+                <taskbar:DesktopApp DesktopApplicationID="Citrix.Workspace" PinGeneration="1"/>
+                <taskbar:DesktopApp DesktopApplicationLinkPath="%AppData%\Microsoft\Windows\Start Menu\Programs\Nijmegen.lnk" PinGeneration="1"/>                
             </taskbar:TaskbarPinList>
         </defaultlayout:TaskbarLayout>
     </CustomTaskbarLayoutCollection>
