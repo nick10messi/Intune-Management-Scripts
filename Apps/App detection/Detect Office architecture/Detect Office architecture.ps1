@@ -1,29 +1,14 @@
 function Get-OfficeArchitecture {
-    $officePaths = @(
-        "HKLM:\SOFTWARE\Microsoft\Office",
-        "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office"
-    )
+    $office32Path = "${env:ProgramFiles(x86)}\Microsoft Office\root\Office16\WINWORD.EXE"
+    $office64Path = "${env:ProgramFiles}\Microsoft Office\root\Office16\WINWORD.EXE"
 
-    foreach ($path in $officePaths) {
-        if (Test-Path $path) {
-            $versions = Get-ChildItem -Path $path -Name | Where-Object { $_ -match "^\d+\.\d+$" }
-            foreach ($version in $versions) {
-                $bitnessKey = Join-Path -Path $path -ChildPath "$version\Outlook"
-                if (Test-Path $bitnessKey) {
-                    $bitness = Get-ItemProperty -Path $bitnessKey -Name "Bitness" -ErrorAction SilentlyContinue
-                    if ($bitness.Bitness -eq "x86") {
-                        Write-Output "Office x86 is installed"
-                        return
-                    } elseif ($bitness.Bitness -eq "x64") {
-                        Write-Output "Office x64 is installed"
-                        return
-                    }
-                }
-            }
-        }
+    if (Test-Path $office64Path) {
+        Write-Output "Office x64 is installed"
+    } elseif (Test-Path $office32Path) {
+        Write-Output "Office x86 is installed"
+    } else {
+        Write-Output "No Office installation detected"
     }
-
-    Write-Output "No Office installation detected"
 }
 
 # Run the function
