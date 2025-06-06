@@ -29,7 +29,7 @@ function Write-Log {
 }
 
 # Start logging
-Write-Log -Message "Script execution started."
+Write-Log -Message "Script execution started." -Level INFO
 
 # Registry data to detect
 $registryPath = "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
