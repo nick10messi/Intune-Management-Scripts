@@ -22,15 +22,18 @@ Param (
     [String]$WorkingDirectory = $null
 )
 
-#Download icon if its located in a url
-if ($iconfile -match '^https://' ) {
-    $IconName = ($iconfile.split('/')[-1]).Split('?')[0]
+#Download icon if it's located in a URL
+if ($IconFile -match '^https://') {
+    $IconName = ($IconFile.Split('/')[-1]).Split('?')[0]
     $IconLocation = "$env:ProgramData\Microsoft\IntuneManagementExtension\Logs\ShortcutIcons\"
     if (!(Test-Path $IconLocation)) {
-        New-Item -ItemType Directory -Force -Path $IconLocation
+        New-Item -ItemType Directory -Force -Path $IconLocation | Out-Null
     }
     Invoke-WebRequest -Uri $IconFile -OutFile "$IconLocation$IconName"
-    $Icon = $iconlocation + $IconName
+    $Icon = Join-Path $IconLocation $IconName
+} else {
+    # Support for local file paths (including .dll,index format)
+    $Icon = $IconFile
 }
 
 #helper function to avoid uneccessary code
@@ -50,19 +53,22 @@ function Add-Shortcut {
         $Shortcut.TargetPath = $ShortcutTargetPath
         $Shortcut.Arguments = $ShortcutArguments
         $Shortcut.WorkingDirectory = $WorkingDirectory
-    
+
         if ($IconFile) {
-            $Shortcut.IconLocation = $Icon
+            if ($Icon -match '^(.*\.dll),(\d+)$') {
+                $iconPath = $matches[1]
+                $iconIndex = $matches[2]
+                $Shortcut.IconLocation = "$iconPath,$iconIndex"
+            } else {
+                $Shortcut.IconLocation = $Icon
+            }
         }
 
-        # Create the shortcut
         $Shortcut.Save()
-        #cleanup
         [Runtime.InteropServices.Marshal]::ReleaseComObject($WshShell) | Out-Null
     }
 }
 
-#check if running as system
 function Test-RunningAsSystem {
     [CmdletBinding()]
     param()
@@ -76,12 +82,10 @@ function Get-DesktopDir {
     param()
     process {
         if (Test-RunningAsSystem) {
-            $desktopDir = Join-Path -Path $env:PUBLIC -ChildPath "Desktop"
+            return Join-Path -Path $env:PUBLIC -ChildPath "Desktop"
+        } else {
+            return [Environment]::GetFolderPath("Desktop")
         }
-        else {
-            $desktopDir = $([Environment]::GetFolderPath("Desktop"))
-        }
-        return $desktopDir
     }
 }
 
@@ -90,23 +94,21 @@ function Get-StartDir {
     param()
     process {
         if (Test-RunningAsSystem) {
-            $startMenuDir = Join-Path $env:ALLUSERSPROFILE "Microsoft\Windows\Start Menu\Programs"
+            return Join-Path $env:ALLUSERSPROFILE "Microsoft\Windows\Start Menu\Programs"
+        } else {
+            return "$([Environment]::GetFolderPath("StartMenu"))\Programs"
         }
-        else {
-            $startMenuDir = "$([Environment]::GetFolderPath("StartMenu"))\Programs"
-        }
-        return $startMenuDir
     }
 }
 
-#### Desktop Shortcut
+# Desktop Shortcut
 if ($DesktopShortcut.IsPresent -eq $true) {
-    $destinationPath = Join-Path -Path $(Get-DesktopDir) -ChildPath "$shortcutDisplayName.lnk"
+    $destinationPath = Join-Path -Path (Get-DesktopDir) -ChildPath "$ShortcutDisplayName.lnk"
     Add-Shortcut -DestinationPath $destinationPath -ShortcutTargetPath $ShortcutTargetPath -WorkingDirectory $WorkingDirectory
 }
 
-#### Start menu entry
+# Start menu entry
 if ($StartMenuShortcut.IsPresent -eq $true) {
-    $destinationPath = Join-Path -Path $(Get-StartDir) -ChildPath "$shortcutDisplayName.lnk"
+    $destinationPath = Join-Path -Path (Get-StartDir) -ChildPath "$ShortcutDisplayName.lnk"
     Add-Shortcut -DestinationPath $destinationPath -ShortcutTargetPath $ShortcutTargetPath -WorkingDirectory $WorkingDirectory
 }
