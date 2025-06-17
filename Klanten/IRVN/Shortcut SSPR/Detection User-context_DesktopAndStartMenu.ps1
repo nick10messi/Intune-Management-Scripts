@@ -36,7 +36,7 @@ function Get-StartDir {
 }
 #### End of functions ####
 
-$ShortcutName = "NAME OF THE SHORTCUT WITHOUT .INK"
+$ShortcutName = "IRVN Wachtwoord Reset"
 
 #### Detect Desktop shortcut ####
 $Desktop_Location = Get-DesktopDir
