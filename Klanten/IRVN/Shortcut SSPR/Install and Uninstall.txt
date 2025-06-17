@@ -1,0 +1,3 @@
+.\CreateShortcutIcon.ps1 -ShortcutTargetPath "https://passwordreset.microsoftonline.com/?whr=irvn.nl" -ShortcutDisplayName "IRVN Wachtwoord Reset" -StartMenuShortcut $True -DesktopShortcut $True -IconFile "C:\Windows\System32\imageres.dll,77"
+
+.\RemoveShortcutIcon.ps1 -ShortcutDisplayName "IRVN Wachtwoord Reset" -StartMenuShortcut $true -DesktopShortcut $true
