@@ -22,29 +22,37 @@ Param (
     [String]$WorkingDirectory = $null
 )
 
-#Download icon if it's located in a URL
+#Determine final icon path
 if ($IconFile -match '^https://') {
+    # Download icon from URL
     $IconName = ($IconFile.Split('/')[-1]).Split('?')[0]
-    $IconLocation = "$env:ProgramData\Microsoft\IntuneManagementExtension\Logs\ShortcutIcons\"
+    $IconLocation = "$env:ProgramData\Shortcut_Icons"
     if (!(Test-Path $IconLocation)) {
         New-Item -ItemType Directory -Force -Path $IconLocation | Out-Null
     }
-    Invoke-WebRequest -Uri $IconFile -OutFile "$IconLocation$IconName"
     $Icon = Join-Path $IconLocation $IconName
+    Invoke-WebRequest -Uri $IconFile -OutFile $Icon
+}
+elseif (Test-Path -Path $IconFile -PathType Leaf) {
+    # Icon file exists locally (e.g., bundled in package)
+    $TargetIconPath = "$env:ProgramData\Shortcut_Icons\$(Split-Path -Leaf $IconFile)"
+    if (!(Test-Path "$env:ProgramData\Shortcut_Icons")) {
+        New-Item -ItemType Directory -Force -Path "$env:ProgramData\Shortcut_Icons" | Out-Null
+    }
+    Copy-Item -Path $IconFile -Destination $TargetIconPath -Force
+    $Icon = $TargetIconPath
 } else {
-    # Support for local file paths (including .dll,index format)
-    $Icon = $IconFile
+    $Icon = $null
 }
 
-#helper function to avoid uneccessary code
 function Add-Shortcut {
     param (
         [Parameter(Mandatory)]
         [String]$ShortcutTargetPath,
         [Parameter(Mandatory)]
-        [String] $DestinationPath,
+        [String]$DestinationPath,
         [Parameter()]
-        [String] $WorkingDirectory
+        [String]$WorkingDirectory
     )
 
     process {
@@ -54,14 +62,8 @@ function Add-Shortcut {
         $Shortcut.Arguments = $ShortcutArguments
         $Shortcut.WorkingDirectory = $WorkingDirectory
 
-        if ($IconFile) {
-            if ($Icon -match '^(.*\.dll),(\d+)$') {
-                $iconPath = $matches[1]
-                $iconIndex = $matches[2]
-                $Shortcut.IconLocation = "$iconPath,$iconIndex"
-            } else {
-                $Shortcut.IconLocation = $Icon
-            }
+        if ($Icon) {
+            $Shortcut.IconLocation = $Icon
         }
 
         $Shortcut.Save()
