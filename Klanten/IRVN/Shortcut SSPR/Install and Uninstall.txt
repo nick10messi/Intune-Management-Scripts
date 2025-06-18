@@ -1,3 +1,3 @@
-powershell.exe -ExecutionPolicy Bypass -File .\CreateShortcutIcon.ps1 -ShortcutTargetPath "https://passwordreset.microsoftonline.com/?whr=irvn.nl" -ShortcutDisplayName "IRVN Wachtwoord Reset" -StartMenuShortcut $true -DesktopShortcut $true -IconFile "C:\Windows\System32\imageres.dll,77"
+powershell.exe -ExecutionPolicy Bypass -File .\CreateShortcutIcon.ps1 -ShortcutTargetPath "https://passwordreset.microsoftonline.com/?whr=irvn.nl" -ShortcutDisplayName "IRVN Wachtwoord Reset" -StartMenuShortcut $true -DesktopShortcut $true -IconFile "SSPR.ico"
 
 powershell.exe -ExecutionPolicy Bypass -File .\RemoveShortcutIcon.ps1 -ShortcutDisplayName "IRVN Wachtwoord Reset" -StartMenuShortcut $true -DesktopShortcut $true
