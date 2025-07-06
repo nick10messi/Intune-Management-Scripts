@@ -7,20 +7,6 @@ function Test-RunningAsSystem {
     }
 }
 
-function Get-DesktopDir {
-    [CmdletBinding()]
-    param()
-    process {
-        if (Test-RunningAsSystem) {
-            $desktopDir = Join-Path -Path $env:PUBLIC -ChildPath "Desktop"
-        }
-        else {
-            $desktopDir = $([Environment]::GetFolderPath("Desktop"))
-        }
-        return $desktopDir
-    }
-}
-
 function Get-StartDir {
     [CmdletBinding()]
     param()
@@ -34,22 +20,11 @@ function Get-StartDir {
         return $startMenuDir
     }
 }
+
 #### End of functions ####
-
-$ShortcutName = "IRVN Wachtwoord Reset"
-
-#### Detect Desktop shortcut ####
-$Desktop_Location = Get-DesktopDir
-
-if (Test-Path $Desktop_Location\$ShortcutName.lnk) {
-    Write-Host "Shortcut $ShortcutName is gevonden"
-}
-else {
-    Exit 1
-}
-
-### Detect Start Menu shortcut
+#### Detect Start Menu shortcut ####
 $StartMenu_Location = Get-StartDir
+$ShortcutName = "IRVN Wachtwoord Reset"
 
 if (Test-Path $StartMenu_Location\$ShortcutName.lnk) {
     Write-Host "Shortcut $ShortcutName is gevonden"
