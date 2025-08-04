@@ -42,8 +42,6 @@ try {
     Set-ItemProperty -Path $cursorPath -Name "(default)" -Value "Windows Black (large)"
     Write-Log -Message "Cursor-schema ingesteld op 'Windows Black (large)'" -Level "INFO"
 
-    # Cursor schema direct toepassen (optioneel)
-    rundll32.exe user32.dll,SetCursorScheme
 
     exit 0
 } catch {
