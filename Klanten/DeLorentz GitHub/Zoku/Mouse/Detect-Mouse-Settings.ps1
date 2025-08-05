@@ -1,8 +1,8 @@
 ###########################################################################
 # Auteur      : Nick Kok
-# Doel        : Detecteert of ThreeFingerSlideEnabled, muisinstellingen en cursor-schema correct staan
+# Doel        : Detecteert of ThreeFingerSlideEnabled en Enhance Pointer Precision zijn uitgeschakeld
 # Versie      : 1.0
-# Datum       : 04-08-2025
+# Datum       : 05-08-2025
 ###########################################################################
 
 function Write-Log {
@@ -22,22 +22,19 @@ function Write-Log {
 try {
     $ptpPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\PrecisionTouchPad"
     $mousePath = "HKCU:\Control Panel\Mouse"
-    $cursorPath = "HKCU:\Control Panel\Cursors"
 
     $threeFinger = Get-ItemProperty -Path $ptpPath -Name "ThreeFingerSlideEnabled" -ErrorAction Stop | Select-Object -ExpandProperty ThreeFingerSlideEnabled
     $mouseSpeed = Get-ItemProperty -Path $mousePath -Name "MouseSpeed" -ErrorAction Stop | Select-Object -ExpandProperty MouseSpeed
     $mouseThreshold1 = Get-ItemProperty -Path $mousePath -Name "MouseThreshold1" -ErrorAction Stop | Select-Object -ExpandProperty MouseThreshold1
     $mouseThreshold2 = Get-ItemProperty -Path $mousePath -Name "MouseThreshold2" -ErrorAction Stop | Select-Object -ExpandProperty MouseThreshold2
-    $cursorScheme = Get-ItemProperty -Path $cursorPath -ErrorAction Stop | Select-Object -ExpandProperty "(default)"
 
     if (
         $threeFinger -ne 0 -or 
         $mouseSpeed -ne 0 -or 
         $mouseThreshold1 -ne 0 -or 
-        $mouseThreshold2 -ne 0 -or 
-        $cursorScheme -ne "Windows Black (large)"
+        $mouseThreshold2 -ne 0
     ) {
-        Write-Log -Message "Instellingen niet correct: ThreeFingerSlideEnabled=$threeFinger, MouseSpeed=$mouseSpeed, MouseThreshold1=$mouseThreshold1, MouseThreshold2=$mouseThreshold2, CursorsDefault=$cursorScheme" -Level "INFO"
+        Write-Log -Message "Instellingen niet correct: ThreeFingerSlideEnabled=$threeFinger, MouseSpeed=$mouseSpeed, MouseThreshold1=$mouseThreshold1, MouseThreshold2=$mouseThreshold2" -Level "INFO"
         exit 1
     } else {
         Write-Log -Message "Alle instellingen zijn correct." -Level "INFO"
