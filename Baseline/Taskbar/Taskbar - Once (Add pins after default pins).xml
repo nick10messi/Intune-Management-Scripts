@@ -5,11 +5,11 @@ xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout"
 xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout"
 xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout"
 Version="1">
-    <CustomTaskbarLayoutCollection PinListPlacement="Replace">
+    <CustomTaskbarLayoutCollection>
         <defaultlayout:TaskbarLayout>
             <taskbar:TaskbarPinList>
-                <taskbar:DesktopApp DesktopApplicationLinkPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk" PinGeneration="1"/>
-                <taskbar:DesktopApp DesktopApplicationLinkPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk" PinGeneration="1"/>
+                <taskbar:DesktopApp DesktopApplicationID="Microsoft.Windows.Explorer" PinGeneration="1"/>
+                <taskbar:DesktopApp DesktopApplicationID="MSEdge" PinGeneration="1"/>
             </taskbar:TaskbarPinList>
         </defaultlayout:TaskbarLayout>
     </CustomTaskbarLayoutCollection>
