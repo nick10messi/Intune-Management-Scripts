@@ -111,24 +111,6 @@ UninstallAppFull -appName $app
 
 }
 
-#Verwijder HP Support Assistant
-# Delete the registry key
-Remove-Item -Path "HKLM:\Software\WOW6432Node\Hewlett-Packard\HPActiveSupport" -Recurse -ErrorAction SilentlyContinue
-
-# Define the path to the uninstall executable
-$uninstallPath = "C:\Program Files (x86)\Hewlett-Packard\HP Support Framework\UninstallHPSA.exe"
-
-# Check if the uninstall executable exists
-if (Test-Path $uninstallPath) {
-    # Run the uninstall command
-    Start-Process -FilePath $uninstallPath -ArgumentList "/s /v/qn UninstallKeepPreferences=FALSE" -Wait
-    Write-Output "HP Support Assistant uninstallation initiated."
-} else {
-    Write-Warning "Uninstall executable not found at path: $uninstallPath"
-}
-
-
-
 ##Belt and braces, remove via CIM too
 foreach ($program in $UninstallPrograms) {
 Get-CimInstance -Classname Win32_Product | Where-Object Name -Match $program | Invoke-CimMethod -MethodName UnInstall
