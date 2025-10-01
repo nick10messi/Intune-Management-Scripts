@@ -39,160 +39,6 @@ Else {
 
 Start-Transcript -Path "C:\ProgramData\Debloat\Debloat.log"
 
-$locale = Get-WinSystemLocale | Select-Object -expandproperty Name
-
-##Switch on locale to set variables
-## Switch on locale to set variables
-switch ($locale) {
-    "ar-SA" {
-        $everyone = "الجميع"
-        $builtin = "مدمج"
-    }
-    "bg-BG" {
-        $everyone = "Всички"
-        $builtin = "Вграден"
-    }
-    "cs-CZ" {
-        $everyone = "Všichni"
-        $builtin = "Vestavěný"
-    }
-    "da-DK" {
-        $everyone = "Alle"
-        $builtin = "Indbygget"
-    }
-    "de-DE" {
-        $everyone = "Jeder"
-        $builtin = "Integriert"
-    }
-    "el-GR" {
-        $everyone = "Όλοι"
-        $builtin = "Ενσωματωμένο"
-    }
-    "en-US" {
-        $everyone = "Everyone"
-        $builtin = "Builtin"
-    }    
-    "en-GB" {
-        $everyone = "Everyone"
-        $builtin = "Builtin"
-    }
-    "es-ES" {
-        $everyone = "Todos"
-        $builtin = "Incorporado"
-    }
-    "et-EE" {
-        $everyone = "Kõik"
-        $builtin = "Sisseehitatud"
-    }
-    "fi-FI" {
-        $everyone = "Kaikki"
-        $builtin = "Sisäänrakennettu"
-    }
-    "fr-FR" {
-        $everyone = "Tout le monde"
-        $builtin = "Intégré"
-    }
-    "he-IL" {
-        $everyone = "כולם"
-        $builtin = "מובנה"
-    }
-    "hr-HR" {
-        $everyone = "Svi"
-        $builtin = "Ugrađeni"
-    }
-    "hu-HU" {
-        $everyone = "Mindenki"
-        $builtin = "Beépített"
-    }
-    "it-IT" {
-        $everyone = "Tutti"
-        $builtin = "Incorporato"
-    }
-    "ja-JP" {
-        $everyone = "すべてのユーザー"
-        $builtin = "ビルトイン"
-    }
-    "ko-KR" {
-        $everyone = "모든 사용자"
-        $builtin = "기본 제공"
-    }
-    "lt-LT" {
-        $everyone = "Visi"
-        $builtin = "Įmontuotas"
-    }
-    "lv-LV" {
-        $everyone = "Visi"
-        $builtin = "Iebūvēts"
-    }
-    "nb-NO" {
-        $everyone = "Alle"
-        $builtin = "Innebygd"
-    }
-    "nl-NL" {
-        $everyone = "Iedereen"
-        $builtin = "Ingebouwd"
-    }
-    "pl-PL" {
-        $everyone = "Wszyscy"
-        $builtin = "Wbudowany"
-    }
-    "pt-BR" {
-        $everyone = "Todos"
-        $builtin = "Integrado"
-    }
-    "pt-PT" {
-        $everyone = "Todos"
-        $builtin = "Incorporado"
-    }
-    "ro-RO" {
-        $everyone = "Toată lumea"
-        $builtin = "Incorporat"
-    }
-    "ru-RU" {
-        $everyone = "Все пользователи"
-        $builtin = "Встроенный"
-    }
-    "sk-SK" {
-        $everyone = "Všetci"
-        $builtin = "Vstavaný"
-    }
-    "sl-SI" {
-        $everyone = "Vsi"
-        $builtin = "Vgrajen"
-    }
-    "sr-Latn-RS" {
-        $everyone = "Svi"
-        $builtin = "Ugrađeni"
-    }
-    "sv-SE" {
-        $everyone = "Alla"
-        $builtin = "Inbyggd"
-    }
-    "th-TH" {
-        $everyone = "ทุกคน"
-        $builtin = "ภายในเครื่อง"
-    }
-    "tr-TR" {
-        $everyone = "Herkes"
-        $builtin = "Yerleşik"
-    }
-    "uk-UA" {
-        $everyone = "Всі"
-        $builtin = "Вбудований"
-    }
-    "zh-CN" {
-        $everyone = "所有人"
-        $builtin = "内置"
-    }
-    "zh-TW" {
-        $everyone = "所有人"
-        $builtin = "內建"
-    }
-    default {
-        $everyone = "Everyone"
-        $builtin = "Builtin"
-    }
-}
 ############################################################################################################
 #                                        Remove Manufacturer Bloat                                         #
 #                                                                                                          #
@@ -210,28 +56,27 @@ if ($manufacturer -like "*HP*") {
 
 ##HP Specific
 $UninstallPrograms = @(
-    "HP Client Security Manager"
-    "HP Notifications"
-    "HP Security Update Service"
-    "HP System Default Settings"
-    "HP Wolf Security"
-    "HP Wolf Security Application Support for Sure Sense"
-    "HP Wolf Security Application Support for Windows"
-    "AD2F1837.HPPCHardwareDiagnosticsWindows"
-    "AD2F1837.HPPowerManager"
-    "AD2F1837.HPPrivacySettings"
-    "AD2F1837.HPQuickDrop"
-    "AD2F1837.HPSupportAssistant"
-    "AD2F1837.HPSystemInformation"
-    "AD2F1837.myHP"
+    "HP Client Security Manager",
+    "HP Notifications",
+    "HP Security Update Service",
+    "HP System Default Settings",
+    "HP Wolf Security",
+    "HP Wolf Security Application Support for Sure Sense",
+    "HP Wolf Security Application Support for Windows",
+    "AD2F1837.HPPCHardwareDiagnosticsWindows",
+    "AD2F1837.HPPowerManager",
+    "AD2F1837.HPPrivacySettings",
+    "AD2F1837.HPQuickDrop",
+    "AD2F1837.HPSupportAssistant",
+    "AD2F1837.HPSystemInformation",
+    "AD2F1837.myHP",
     "RealtekSemiconductorCorp.HPAudioControl",
     "HP Sure Recover",
-    "HP Sure Run Module"
-    "RealtekSemiconductorCorp.HPAudioControl_2.39.280.0_x64__dt26b99r8h8gj"
-    "HP Wolf Security - Console"
-    "HP Wolf Security Application Support for Chrome 122.0.6261.139"
+    "HP Sure Run Module",
+    "RealtekSemiconductorCorp.HPAudioControl_2.39.280.0_x64__dt26b99r8h8gj",
+    "HP Wolf Security - Console",
+    "HP Wolf Security Application Support for Chrome 122.0.6261.139",
     "Windows Driver Package - HP Inc. sselam_4_4_2_453 AntiVirus  (11/01/2022 4.4.2.453)"
-
 )
 
 
@@ -325,41 +170,41 @@ if ($manufacturer -like "*Dell*") {
 ##Dell
 
 $UninstallPrograms = @(
-    "Dell Optimizer"
-    "Dell Power Manager"
-    "DellOptimizerUI"
-    "Dell SupportAssist OS Recovery"
-    "Dell SupportAssist"
-    "Dell Optimizer Service"
-        "Dell Optimizer Core"
+    "Dell Optimizer",
+    "Dell Power Manager",
+    "DellOptimizerUI",
+    "Dell SupportAssist OS Recovery",
+    "Dell SupportAssist",
+    "Dell Optimizer Service",
+    "Dell Optimizer Core",
+    "DellInc.PartnerPromo",
+    "DellInc.DellOptimizer",
+    "DellInc.DellCommandUpdate",
+    "DellInc.DellPowerManager",
+    "DellInc.DellDigitalDelivery",
+    "DellInc.DellSupportAssistforPCs",
+    "DellInc.PartnerPromo",
+    "Dell Command | Update",
+    "Dell Command | Update for Windows Universal",
+    "Dell Command | Update for Windows 10",
+    "Dell Command | Power Manager",
+    "Dell Digital Delivery Service",
+    "Dell Digital Delivery",
+    "Dell Peripheral Manager",
+    "Dell Power Manager Service",
+    "Dell SupportAssist Remediation",
+    "SupportAssist Recovery Assistant",
+    "Dell SupportAssist OS Recovery Plugin for Dell Update",
+    "Dell SupportAssistAgent",
+    "Dell Update - SupportAssist Update Plugin",
+    "Dell Core Services",
+    "Dell Pair",
+    "Dell Display Manager 2.0",
+    "Dell Display Manager 2.1",
+    "Dell Display Manager 2.2",
+    "Dell SupportAssist Remediation",
+    "Dell Update - SupportAssist Update Plugin",
     "DellInc.PartnerPromo"
-    "DellInc.DellOptimizer"
-    "DellInc.DellCommandUpdate"
-        "DellInc.DellPowerManager"
-        "DellInc.DellDigitalDelivery"
-        "DellInc.DellSupportAssistforPCs"
-        "DellInc.PartnerPromo"
-        "Dell Command | Update"
-    "Dell Command | Update for Windows Universal"
-        "Dell Command | Update for Windows 10"
-        "Dell Command | Power Manager"
-        "Dell Digital Delivery Service"
-    "Dell Digital Delivery"
-        "Dell Peripheral Manager"
-        "Dell Power Manager Service"
-    "Dell SupportAssist Remediation"
-    "SupportAssist Recovery Assistant"
-        "Dell SupportAssist OS Recovery Plugin for Dell Update"
-        "Dell SupportAssistAgent"
-        "Dell Update - SupportAssist Update Plugin"
-        "Dell Core Services"
-        "Dell Pair"
-        "Dell Display Manager 2.0"
-        "Dell Display Manager 2.1"
-        "Dell Display Manager 2.2"
-        "Dell SupportAssist Remediation"
-        "Dell Update - SupportAssist Update Plugin"
-        "DellInc.PartnerPromo"
 )
 
 
@@ -532,16 +377,16 @@ if ($manufacturer -like "Lenovo") {
     }
 
     $UninstallPrograms = @(
-        "E046963F.AIMeetingManager"
-        "E0469640.SmartAppearance"
-        "MirametrixInc.GlancebyMirametrix"
-        "E046963F.LenovoCompanion"
-        "E0469640.LenovoUtility"
-        "E0469640.LenovoSmartCommunication"
-        "E046963F.LenovoSettingsforEnterprise"
-        "E046963F.cameraSettings"
-        "4505Fortemedia.FMAPOControl2_2.1.37.0_x64__4pejv7q2gmsnr"
-        "ElevocTechnologyCo.Ltd.SmartMicrophoneSettings_1.1.49.0_x64__ttaqwwhyt5s6t"
+        "E046963F.AIMeetingManager",
+        "E0469640.SmartAppearance",
+        "MirametrixInc.GlancebyMirametrix",
+        "E046963F.LenovoCompanion",
+        "E0469640.LenovoUtility",
+        "E0469640.LenovoSmartCommunication",
+        "E046963F.LenovoSettingsforEnterprise",
+        "E046963F.cameraSettings",
+        "4505Fortemedia.FMAPOControl2_2.1.37.0_x64__4pejv7q2gmsnr",
+        "ElevocTechnologyCo.Ltd.SmartMicrophoneSettings_1.1.49.0_x64__ttaqwwhyt5s6t",
         "Lenovo User Guide"
     )
 
@@ -677,40 +522,7 @@ $filename = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\User Guide.lnk
 if (Test-Path $filename) {
     Remove-Item -Path $filename -Force
 }
-
-##Camera fix
-$keypath = "HKLM:\SOFTWARE\\Microsoft\Windows Media Foundation\Platform"
-$keyname = "EnableFrameServerMode"
-$value = 0
-if (!(Test-Path $keypath)) {
-    New-Item -Path $keypath -Force
 }
-Set-ItemProperty -Path $keypath -Name $keyname -Value $value -Type DWord -Force
-
-$keypath2 = "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows Media Foundation\Platform key"
-if (!(Test-Path $keypath2)) {
-    New-Item -Path $keypath2 -Force
-}
-Set-ItemProperty -Path $keypath2 -Name $keyname -Value $value -Type DWord -Force
-}
-
-
-##Remove bookmarks
-
-##Enumerate all users
-$users = Get-ChildItem -Path "C:\Users" -Directory
-foreach ($user in $users) {
-    $userpath = $user.FullName
-    $bookmarks = "C:\Users\$userpath\AppData\Local\Microsoft\Edge\User Data\Default\Bookmarks"
-    ##Remove any files if they exist
-    foreach ($bookmark in $bookmarks) {
-        if (Test-Path -Path $bookmark) {
-            Remove-Item -Path $bookmark -Force
-        }
-    }
-}
-
-
 
 write-host "Completed"
 
