@@ -119,4 +119,32 @@ foreach ($app in $HPBloatware) {
     Remove-HPApp -AppName $app
 }
 
+# Verwijder HP AppX packages
+$HPAppXPackages = @(
+    "AD2F1837.HPPCHardwareDiagnosticsWindows",
+    "AD2F1837.HPPowerManager",
+    "AD2F1837.HPPrivacySettings",
+    "AD2F1837.HPSupportAssistant",
+    "AD2F1837.HPSystemInformation"
+)
+
+foreach ($pkg in $HPAppXPackages) {
+    try {
+        # Verwijder AppX bij alle bestaande users
+        Get-AppxPackage -AllUsers -Name $pkg | ForEach-Object {
+            Write-Log -Message "Verwijder AppX package $($_.Name) voor alle users"
+            Remove-AppxPackage -Package $_.PackageFullName -AllUsers -ErrorAction SilentlyContinue
+        }
+
+        # Verwijder uit provisioned packages (zodat nieuwe users het niet krijgen)
+        Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -eq $pkg } | ForEach-Object {
+            Write-Log -Message "Verwijder provisioned package $($_.DisplayName)"
+            Remove-AppxProvisionedPackage -Online -PackageName $_.PackageName -ErrorAction SilentlyContinue
+        }
+    }
+    catch {
+        Write-Log -Message "Fout bij verwijderen van $pkg $_" -Level "ERROR"
+    }
+}
+
 Write-Log -Message "HP bloatware verwijderen voltooid."
