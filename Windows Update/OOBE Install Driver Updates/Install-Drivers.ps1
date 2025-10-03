@@ -25,7 +25,7 @@ else {
 # Start driverupdate
 try {
     Write-Output "Starten met installeren van beschikbare driverupdates..."
-    Start-OOBEDeploy -UpdateDrivers
+    Start-OOBEDeploy -UpdateDrivers -UpdateWindows
     Restart-Computer
 } 
 catch {
