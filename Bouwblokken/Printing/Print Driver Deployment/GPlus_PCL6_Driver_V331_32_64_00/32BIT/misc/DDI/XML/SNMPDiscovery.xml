@@ -1,0 +1,1015 @@
+<!--
+*************************************************************************
+* Copyright CANON INC. 1999												*
+*************************************************************************
+-->
+<!--
+*************************************************************************
+* Ver3.31 Installer Canon Generic Plus PCL6								*
+*************************************************************************
+-->
+<discovery xmlns="urn:cissnmpdiscovery">
+	<broadcastType>eLimitedBroadcast</broadcastType>
+	<methodList onlyMatching="true">
+		<method mibType="Canon MIB">
+			<OIDList>
+				<PDLType multiLevel="true">.1.3.6.1.2.1.43.15.1.1.2</PDLType>
+				<suppliesType multiLevel="true">.1.3.6.1.2.1.43.11.1.1.5</suppliesType>
+				<devTypeOID>.1.3.6.1.4.1.1602.1.1.1.1.0</devTypeOID>
+				<devNameOID>.1.3.6.1.4.1.1602.1.1.1.2.0</devNameOID>
+				<macAddrOID hexEncoded="true">.1.3.6.1.2.1.2.2.1.6.1</macAddrOID>
+				<sysDescOID>.1.3.6.1.2.1.1.1.0</sysDescOID>
+			</OIDList>
+			<deviceList>
+ 				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2016"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2000"/>
+						<TypeStr value="iR1600"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2010"/>
+						<TypeStr value="iR1610"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2020"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2018"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1018"/>
+						<TypeStr value="iR1022"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR400PSPCL"/>
+						<TypeStr value="iR400PCL"/>
+						<TypeStr value="iR330-400-P1_PSPCL"/>
+						<TypeStr value="iR330-400-R1_PCL"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2200"/>
+						<TypeStr value="iR2800"/>
+						<TypeStr value="iR3300"/>
+						<TypeStr value="iR2200i"/>
+						<TypeStr value="iR2800i"/>
+						<TypeStr value="iR3300i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2220"/>
+						<TypeStr value="iR3320"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2230"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1019"/>
+						<TypeStr value="iR1023"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1020"/>
+						<TypeStr value="iR1024"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1021"/>
+						<TypeStr value="iR1025"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3025"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3225"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2270"/>
+						<TypeStr value="iR2870"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2830"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2022"/>
+						<TypeStr value="iR2025"/>
+						<TypeStr value="iR2030"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3030"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3230"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3530"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3570"/>
+						<TypeStr value="iR4570"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR4530"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3035"/>
+						<TypeStr value="iR3045"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR3235"/>
+						<TypeStr value="iR3245"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5050"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5050-S2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5070"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5000-6000"/>
+						<TypeStr value="iR5000"/>
+						<TypeStr value="iR6000"/>
+						<TypeStr value="iR5000i"/>
+						<TypeStr value="iR6000i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5000-L1"/>
+						<TypeStr value="iR6000-L1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5020"/>
+						<TypeStr value="iR6020"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5020-M2"/>
+						<TypeStr value="iR6020-M2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5055"/>
+						<TypeStr value="iR5065"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5055-S2"/>
+						<TypeStr value="iR5065-S2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5570"/>
+						<TypeStr value="iR6570"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5570-M3"/>
+						<TypeStr value="iR6570-M3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5070-S1"/>
+						<TypeStr value="iR5570-S1"/>
+						<TypeStr value="iR6570-S1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7200-M1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7200-M2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5075"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5075-S2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8070"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8070-M3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8070-S1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8500"/>
+						<TypeStr value="iR85"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8500-M1"/>
+						<TypeStr value="iR85-M1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8500-M2"/>
+						<TypeStr value="iR85-M2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR85PLUS"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR85PLUS-M3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR9070"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR9070-M3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR105"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR105-M1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR105-M2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR105PLUS"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR105PLUS-M3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7086"/>
+						<TypeStr value="iR7095"/>
+						<TypeStr value="iR7105"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7086-S1"/>
+						<TypeStr value="iR7095-S1"/>
+						<TypeStr value="iR7105-S1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7086-S2"/>
+						<TypeStr value="iR7095-S2"/>
+						<TypeStr value="iR7105-S2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C1PLUS"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C6000VP"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C6000"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C1-T1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C1PLUS-T1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C7000VP"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C1022"/>
+						<TypeStr value="iR C1021"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C2580"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3180"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR 3180C EUR"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C2880"/>
+						<TypeStr value="iR C3380"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3080"/>
+						<TypeStr value="iR C3480"/>
+						<TypeStr value="iR C3580"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C2380"/>
+						<TypeStr value="iR C2550"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="CLC4040-iR C4580-H1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C4080-H1"/>
+						<TypeStr value="iR C4580-H1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C4080"/>
+						<TypeStr value="iR C4580"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="CLC5151-iR C5180-H1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5180-H1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5180"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5185"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5185-H1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5058"/>
+						<TypeStr value="iR C5068"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR 5880C EUR"/>
+						<TypeStr value="iR 6880C EUR"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5880"/>
+						<TypeStr value="iR C6880"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iC2300"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF7100 Series"/>
+						<TypeStr value="MF7170i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF7200 Series"/>
+						<TypeStr value="MF7280 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF7470"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF9100 Series"/>
+						<TypeStr value="MF9100/9300 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon Inc. LBP-2000 Printer"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LC800"/>
+						<TypeStr value="L3000"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP3360"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP3370"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP3460"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP7750C"/>
+						<TypeStr value="LBP5460"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP5970"/>
+						<TypeStr value="LBP5975"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LASER CLASS 700"/>
+						<TypeStr value="FAX-L2000"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF5800 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF5900 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF8500C Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF6100 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="D1300 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon LBP151"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LC600 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C10000VP-B5100"/>
+						<TypeStr value="iPR C8000VP-B5100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C10000VP-B4100"/>
+						<TypeStr value="iPR C8000VP-B4100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C850-H300"/>
+						<TypeStr value="iPR C800-H300"/>
+						<TypeStr value="iPR C750-H300"/>
+						<TypeStr value="iPR C700-H300"/>
+						<TypeStr value="iPR C650-H300"/>
+						<TypeStr value="iPR C600-H300"/>
+						<TypeStr value="iPR C65-H300"/>
+						<TypeStr value="iPR C60-H300"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5560-GX500"/>
+						<TypeStr value="iR-ADV C5550-GX500"/>
+						<TypeStr value="iR-ADV C5540-GX500"/>
+						<TypeStr value="iR-ADV C5535-GX500"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C7000VP-A3100"/>
+						<TypeStr value="iPR C6000-A3100"/>
+						<TypeStr value="iPR C6000VP-A3100"/>
+						<TypeStr value="iPR C7000VP-A2100"/>
+						<TypeStr value="iPR C6000-A2100"/>
+						<TypeStr value="iPR C6000VP-A2100"/>
+						<TypeStr value="iPR C6000-A1100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C7000VP-A3000"/>
+						<TypeStr value="iPR C7000VP-A2000"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C10000VP-B5000"/>
+						<TypeStr value="iPR C8000VP-B5000"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C10000VP-B4000"/>
+						<TypeStr value="iPR C8000VP-B4000"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C850-F200"/>
+						<TypeStr value="iPR C800-F200"/>
+						<TypeStr value="iPR C750-F200"/>
+						<TypeStr value="iPR C700-F200"/>
+						<TypeStr value="iPR C650-F200"/>
+						<TypeStr value="iPR C600-F200"/>
+						<TypeStr value="iPR C65-F200"/>
+						<TypeStr value="iPR C60-F200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C1PLUS-Z1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C7010VP-A3300"/>
+						<TypeStr value="iPR C6010VP-A3300"/>
+						<TypeStr value="iPR C7000VP-A3300"/>
+						<TypeStr value="iPR C6000VP-A3300"/>
+						<TypeStr value="iPR C7010VP-A2300"/>
+						<TypeStr value="iPR C6010VP-A2300"/>
+						<TypeStr value="iPR C7000VP-A2300"/>
+						<TypeStr value="iPR C6000VP-A2300"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C6010-A3300"/>
+						<TypeStr value="iPR C6000-A3300"/>
+						<TypeStr value="iPR C6010-A2300"/>
+						<TypeStr value="iPR C6000-A2300"/>
+						<TypeStr value="iPR C6010-A1300"/>
+						<TypeStr value="iPR C6000-A1300"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9280-GX400"/>
+						<TypeStr value="iR-ADV C9270-GX400"/>
+						<TypeStr value="iR-ADV C9260-GX400"/>
+						<TypeStr value="iR-ADV C7280-GX400"/>
+						<TypeStr value="iR-ADV C7270-GX400"/>
+						<TypeStr value="iR-ADV C7260-GX400"/>
+						<TypeStr value="iR-ADV C5255-GX400"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C7010VP-A3200"/>
+						<TypeStr value="iPR C6010VP-A3200"/>
+						<TypeStr value="iPR C7000VP-A3200"/>
+						<TypeStr value="iPR C6000VP-A3200"/>
+						<TypeStr value="iPR C7010VP-A2200"/>
+						<TypeStr value="iPR C6010VP-A2200"/>
+						<TypeStr value="iPR C7000VP-A2200"/>
+						<TypeStr value="iPR C6000VP-A2200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C6010-A3200"/>
+						<TypeStr value="iPR C6000-A3200"/>
+						<TypeStr value="iPR C6010-A2200"/>
+						<TypeStr value="iPR C6000-A2200"/>
+						<TypeStr value="iPR C6010-A1200"/>
+						<TypeStr value="iPR C6000-A1200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9075-GX300"/>
+						<TypeStr value="iR-ADV C9065-GX300"/>
+						<TypeStr value="iR-ADV C7065-GX300"/>
+						<TypeStr value="iR-ADV C7055-GX300"/>
+						<TypeStr value="iR-ADV C5051-GX300"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5000-L1"/>
+						<TypeStr value="iR6000-L1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR8500-M2"/>
+						<TypeStr value="iR85-M2"/>
+						<TypeStr value="iR105-M2"/>
+						<TypeStr value="iR7200-M2"/>
+						<TypeStr value="iR5020-M2"/>
+						<TypeStr value="iR6020-M2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR 3170C-C3170-F2"/>
+						<TypeStr value="iR C3170-F2"/>
+						<TypeStr value="iR 2570C-C2570-F2"/>
+						<TypeStr value="iR C2570-F2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C6870-G1"/>
+						<TypeStr value="iR 6870C-C6870-G1"/>
+						<TypeStr value="iR C5870-G1"/>
+						<TypeStr value="iR 5870C-C5870-G1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3220-C2"/>
+						<TypeStr value="CLC-iR C3220-C2"/>
+						<TypeStr value="iR C2620-C2"/>
+						<TypeStr value="CLC-iR C2620-C2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR5570-M3"/>
+						<TypeStr value="iR6570-M3"/>
+						<TypeStr value="iR8070-M3"/>
+						<TypeStr value="iR85PLUS-M3"/>
+						<TypeStr value="iR9070-M3 "/>
+						<TypeStr value="iR105PLUS-M3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7105-S1"/>
+						<TypeStr value="iR7095-S1"/>
+						<TypeStr value="iR7086-S1"/>
+						<TypeStr value="iR7095P-S1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR7105-S2"/>
+						<TypeStr value="iR7095-S2"/>
+						<TypeStr value="iR7086-S2"/>
+						<TypeStr value="iR5055-S2"/>
+						<TypeStr value="iR5065-S2"/>
+						<TypeStr value="iR5075-S2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C5185-H1"/>
+						<TypeStr value="iR C5180-H1"/>
+						<TypeStr value="iR C4580-H1"/>
+						<TypeStr value="iR C4080-H1"/>
+						<TypeStr value="iR C3880-H1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3380-J1"/>
+						<TypeStr value="iR C2880-J1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C1-T1"/>
+						<TypeStr value="iPR C1PLUS-T1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="M201CR"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="M301CR"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Not Support">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="M351R"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="PDLType">
+						<TypeStr value="3">
+							<matchingTypeStrs name="suppliesType">
+								<TypeStr value="3"/>
+								<TypeStr value="4"/>
+								<TypeStr value="21"/>
+							</matchingTypeStrs>
+						</TypeStr>
+					</matchingTypeStrs>
+					<matchingTypeStrs name="PDLType">
+						<TypeStr value="47">
+							<matchingTypeStrs name="suppliesType">
+								<TypeStr value="3"/>
+								<TypeStr value="4"/>
+								<TypeStr value="21"/>
+							</matchingTypeStrs>
+						</TypeStr>
+					</matchingTypeStrs>
+
+				</device>
+
+			</deviceList>
+		</method>
+	</methodList>
+</discovery>
