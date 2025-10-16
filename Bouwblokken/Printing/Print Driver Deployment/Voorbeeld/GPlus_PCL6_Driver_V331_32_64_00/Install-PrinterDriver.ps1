@@ -38,22 +38,13 @@ if ($printer) {
     Write-Log -Message "Printer '$printerName' niet gevonden, doorgaan." -Level "INFO"
 }
 
+Restart-Service Spooler
+Start-Sleep 10
 
-##########################################################
-### Verwijder oude driver ###
-$infOld = "oem97.inf"
-
-try {
-    Start-Process "pnputil.exe" -ArgumentList "/delete-driver $infOld /uninstall /force" -NoNewWindow -Wait
-    Write-Log -Message "Driver $infOld verwijderd." -Level "INFO"
-}
-catch {
-    Write-Log -Message "Foutmelding bij verwijderen driver: $_" -Level "ERROR"
-}
 
 ##########################################################
 ### Installeert de nieuwe driver ###
-$infPath = "$PSScriptRoot\x64\Driver\CNP60MA64.INF"
+$infPath = ".\x64\Driver\CNP60MA64.INF"
 
 # Importeert de printdriver in de DriverStore
 try {
