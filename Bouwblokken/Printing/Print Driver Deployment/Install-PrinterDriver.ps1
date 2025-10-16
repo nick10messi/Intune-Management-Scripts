@@ -55,18 +55,22 @@ catch {
 ### Installeert de nieuwe driver ###
 $infPath = "$PSScriptRoot\x64\Driver\CNP60MA64.INF"
 
+# Importeert de printdriver in de DriverStore
 try {
     Start-Process "pnputil.exe" -ArgumentList "/add-driver `"$infPath`" /install" -NoNewWindow -Wait
-    Write-Log -Message "Driver CNP60MA64.INF succesvol geinstalleerd in DriverStore" -Level "INFO"
+    Write-Log -Message "Driver succesvol geinstalleerd in DriverStore" -Level "INFO"
 }
 catch {
     Write-Log -Message "Foutmelding bij installeren driver in DriverStore: $_" -Level "ERROR"
 }
 
+# Installeert de printdriver in de Print Spooler service
 try {
     Add-PrinterDriver -Name "Canon Generic Plus PCL6"
-    Write-Log -Message "Driver CNP60MA64.INF succesvol geinstalleerd in Print Spooler service" -Level "INFO"
+    Write-Log -Message "Driver succesvol geinstalleerd in Print Spooler service" -Level "INFO"
 }
 catch {
     Write-Log -Message "Foutmelding bij installeren driver in Print Spooler service: $_" -Level "ERROR"
 }
+
+Write-Log -Message "Script execution completed." -Level "INFO"
