@@ -1,20 +1,51 @@
-﻿### Variables ###
-$PrintShare = "\\PrintServer.domain\PrintShare" #UNC-path of the printer share
-$DefaultPrinter = $false #Set this to $true to set the mapped printer as default printer
+﻿# ===============================
+# Configuratie
+# ===============================
+$printerName = "NAME"
+$driverName  = "Get-PrinterDriver"
+$printerIP   = "IP-Address"
+$portName    = "IP_$printerIP"
+$logPath     = "$env:ProgramData\Printer Mapping\Map-Printer-NAME.log"
 
-### Map printer if not already mapped
-if ((Get-Printer).Name -eq $PrintShare){
-    Write-Host "Printer is al gemapt"
-}
-Else {
-    Add-Printer -ConnectionName $PrintShare -ErrorAction SilentlyContinue
-	Start-Sleep -Seconds 10
+
+# ===============================
+# Loggingfunctie
+# ===============================
+function Write-Log {
+    param(
+        [Parameter(Mandatory = $true)][string]$Message,
+        [ValidateSet("INFO", "WARN", "ERROR")][string]$Level = "INFO"
+    )
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $entry = "[$timestamp][$Level] $Message"
+    Add-Content -Path $logPath -Value $entry
 }
 
-### Set printer as default printer if $DefaultPrinter = $true
-if ($DefaultPrinter -eq $true) {
-    (New-Object -ComObject WScript.Network).SetDefaultPrinter($PrintShare)
+Write-Log -Message "-----------------------------"
+Write-Log -Message "Script gestart."
+
+# ===============================
+# Poort aanmaken indien nodig
+# ===============================
+try {
+    if (-not (Get-PrinterPort -Name $portName -ErrorAction SilentlyContinue)) {
+        Add-PrinterPort -Name $portName -PrinterHostAddress $printerIP
+        Write-Log -Message "Printerpoort '$portName' aangemaakt voor IP $printerIP."
+    } else {
+        Write-Log -Message "Printerpoort '$portName' bestaat al."
+    }
+} catch {
+    Write-Log -Message "Fout bij aanmaken printerpoort: $_" -Level "ERROR"
+    exit 1
 }
-else {
-    Write-Host "Don't set mapped printer as the default printer"
+
+# ===============================
+# Printer toevoegen
+# ===============================
+try {
+    Add-Printer -Name $printerName -DriverName $driverName -PortName $portName
+    Write-Log -Message "Printer '$printerName' succesvol toegevoegd met driver '$driverName'." "INFO"
+} catch {
+    Write-Log "Fout bij toevoegen printer '$printerName': $_" "ERROR"
+    exit 1
 }

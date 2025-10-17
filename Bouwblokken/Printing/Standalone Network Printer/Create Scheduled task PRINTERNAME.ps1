@@ -19,7 +19,7 @@ else {
 ###################################################################################################
 # Copy the PrintMapping.cmd and the PrintMapping-Helper-Script.vbs to ProgramData\Printer Mapping
 ###################################################################################################
-$PrintMapping_ps = ".\.ps1"
+$PrintMapping_ps = ".\MAPPING_SCRIPT.ps1"
 $PrintMapping_Helper_Script = ".\PrintMapping-Helper-Script.vbs"
 
 Copy-Item -Path $PrintMapping_ps -Destination $PrintMappingFolder 

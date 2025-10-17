@@ -3,7 +3,7 @@ $Taskname = "Map Printer PRINTERNAME"
 Unregister-ScheduledTask -TaskName $Taskname -Confirm:$false
 
 # Remove printer from device
-$Printer = "PRINT NAME ON DEVICE" #Name can be checked with Get-Printer command on reference device
+$Printer = "PRINTERNAME" #Name can be checked with Get-Printer command on reference device
 
 if ((Get-Printer).Name -eq $Printer){
     Remove-Printer $Printer -ErrorAction SilentlyContinue
