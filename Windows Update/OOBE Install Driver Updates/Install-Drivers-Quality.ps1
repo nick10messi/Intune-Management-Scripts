@@ -15,7 +15,7 @@ if (-not (Get-PSRepository -Name "PSGallery").InstallationPolicy -eq "Trusted") 
 # Check of de OSD module beschikbaar is. Zo niet, installeer deze
 if (-not (Get-Module -ListAvailable -Name OSD)) {
     Write-Output "OSD module nog niet geïnstalleerd. Installeren!"
-    Install-Module OSD -Force
+    Install-Module OSD -ForceA
     Import-Module OSD
 } 
 else {

@@ -44,7 +44,7 @@ Start-Sleep 10
 
 ##########################################################
 ### Installeert de nieuwe driver ###
-$infPath = ".\x64\Driver\CNP60MA64.INF"
+$infPath = ".\CNP60MA64.INF"
 
 # Importeert de printdriver in de DriverStore
 try {
