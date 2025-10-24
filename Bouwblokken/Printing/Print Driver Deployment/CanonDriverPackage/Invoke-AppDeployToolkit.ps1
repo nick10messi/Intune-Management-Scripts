@@ -174,11 +174,11 @@ function Install-ADTDeployment
     }
 
     # Installeer de nieuwe driver
-    $infPath = Join-Path $dirFiles "CNP60MA64.INF"
+    $infPath = Join-Path $adtSession.DirFiles "CNP60MA64.INF"
     Write-ADTLogEntry -Message "INF-bestandspad: $infPath" -Severity 1
 
     try {
-        Execute-Process -Path "pnputil.exe" -Parameters "/add-driver `"$infPath`" /install" -WindowStyle Hidden -WaitForExit $true
+        Start-ADTProcess -FilePath "pnputil.exe" -ArgumentList  "/add-driver `"$infPath`" /install"
         Write-ADTLogEntry -Message "Driver succesvol geïnstalleerd in de DriverStore." -Severity info
     }
     catch {
@@ -271,7 +271,7 @@ function Uninstall-ADTDeployment
         }
     }
     else {
-        Write-ADTLogEntry -Message "Geen printers gevonden met driver '$driverOld'." --Severity Info
+        Write-ADTLogEntry -Message "Geen printers gevonden met driver '$driverOld'." -Severity Info
     }
 
     # Verwijder nu de printerdriver
@@ -284,7 +284,7 @@ function Uninstall-ADTDeployment
 
     try {
         # Verwijder driver ook uit de driverstore
-        Start-Process "pnputil.exe" -ArgumentList "/delete-driver $infOld /uninstall /force" -NoNewWindow -Wait
+        Start-Process "pnputil.exe" -ArgumentList "/delete-driver $infOld /uninstall /force"
         Write-ADTLogEntry -Message "Driver '$infOld' verwijderd uit driverstore." -Severity Info
     }
     catch {
