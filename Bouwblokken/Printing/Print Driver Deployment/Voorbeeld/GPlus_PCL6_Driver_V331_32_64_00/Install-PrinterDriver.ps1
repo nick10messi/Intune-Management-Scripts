@@ -44,7 +44,16 @@ Start-Sleep 10
 
 ##########################################################
 ### Installeert de nieuwe driver ###
-$infPath = ".\CNP60MA64.INF"
+# Vind de directory waarin het script en de driverbestanden zich bevinden
+$workingDir = Split-Path -Parent ([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName)
+
+# Bouw volledig pad naar het INF-bestand
+$infPath = Join-Path $workingDir "CNP60MA64.INF"
+
+Write-Log -Message "Werkdirectory: $workingDir"
+Write-Log -Message "Driver pad: $infPath"
+
+$infPath = Join-Path $scriptDir "CNP60MA64.INF"
 
 # Importeert de printdriver in de DriverStore
 try {

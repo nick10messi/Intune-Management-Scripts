@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************************************************
+* Copyright CANON INC. 1999												*
+*************************************************************************
+-->
+<!--
+*************************************************************************
+* Ver3.31 Installer Canon Generic Plus PCL6								*
+*************************************************************************
+-->
+<discovery xmlns="urn:slpdiscovery" isEnabled="false">
+	<destinationAddressIPv6>ff02:0:0:0:0:0:1:134c</destinationAddressIPv6>
+	<methodList onlyMatching="true">
+
+		<!-- SLP method to find "service:printer" devices -->
+		<method name="Test" serviceType="printer.canon">
+			<AttributeList>
+				<devNameOID>x-can-PdInfoMachineName</devNameOID>
+				<devTypeOID>x-can-PdInfoProductName</devTypeOID>
+				<sysDescOID>sysDescr</sysDescOID>
+			</AttributeList>
+			<deviceList>
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="i-SENSYS X 1643P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="i-SENSYS X C1946P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="imageFORCE C7165"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1643i II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2224"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2425"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2520"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2525"/>
+						<TypeStr value="iR2530"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="imageRUNNER1133 series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1435"/>
+						<TypeStr value="iR1435P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2535"/>
+						<TypeStr value="iR2545"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2635"/>
+						<TypeStr value="iR2645"/>
+						<TypeStr value="iR2625"/>
+						<TypeStr value="iR2630"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR2725"/>
+						<TypeStr value="iR2730"/>
+						<TypeStr value="iR2735"/>
+						<TypeStr value="iR2745"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR1730"/>
+						<TypeStr value="iR1740"/>
+						<TypeStr value="iR1750"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon iR2006/2206"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C1028"/>
+						<TypeStr value="iR C1030"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C1225"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C1325"/>
+						<TypeStr value="iR C1335"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C1533i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C1538i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3120"/>
+						<TypeStr value="iR C3125"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3222"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3226"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3322"/>
+						<TypeStr value="iR C3326"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 2925"/>
+						<TypeStr value="iR-ADV 2930"/>
+						<TypeStr value="iR-ADV 2935"/>
+						<TypeStr value="iR-ADV 2945"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4025"/>
+						<TypeStr value="iR-ADV 4035"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4225"/>
+						<TypeStr value="iR-ADV 4235"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4525"/>
+						<TypeStr value="iR-ADV 4535"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4525 III"/>
+						<TypeStr value="iR-ADV 4535 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 400"/>
+						<TypeStr value="iR-ADV 500"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4045"/>
+						<TypeStr value="iR-ADV 4051"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4245"/>
+						<TypeStr value="iR-ADV 4251"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4545"/>
+						<TypeStr value="iR-ADV 4551"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4545 III"/>
+						<TypeStr value="iR-ADV 4551 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4725"/>
+						<TypeStr value="iR-ADV 4735"/>
+						<TypeStr value="iR-ADV 4745"/>
+						<TypeStr value="iR-ADV 4751"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4825"/>
+						<TypeStr value="iR-ADV 4835"/>
+						<TypeStr value="iR-ADV 4845"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 4925"/>
+						<TypeStr value="iR-ADV 4935"/>
+						<TypeStr value="iR-ADV 4945"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 525"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 525 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 527"/>
+						<TypeStr value="iR-ADV 617"/>
+						<TypeStr value="iR-ADV 717"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 529"/>
+						<TypeStr value="iR-ADV 619"/>
+						<TypeStr value="iR-ADV 719"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6000"/>
+						<TypeStr value="iR-ADV 6000i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6055"/>
+						<TypeStr value="iR-ADV 6065"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6055-U1"/>
+						<TypeStr value="iR-ADV 6065-U1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6255"/>
+						<TypeStr value="iR-ADV 6265"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6255-U2"/>
+						<TypeStr value="iR-ADV 6265-U2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6555"/>
+						<TypeStr value="iR-ADV 6565"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6555 III"/>
+						<TypeStr value="iR-ADV 6565 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6560"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6560 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6075"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6075-U1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 615"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 615 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6275"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6275-U2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6555-Y1"/>
+						<TypeStr value="iR-ADV 6565-Y1"/>
+						<TypeStr value="iR-ADV 6575-Y1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6555-Y2"/>
+						<TypeStr value="iR-ADV 6565-Y2"/>
+						<TypeStr value="iR-ADV 6575-Y2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6555 III-Y3"/>
+						<TypeStr value="iR-ADV 6565 III-Y3"/>
+						<TypeStr value="iR-ADV 6575 III-Y3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6575"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6575 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6755"/>
+						<TypeStr value="iR-ADV 6765"/>
+						<TypeStr value="iR-ADV 6780"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6755-Y3"/>
+						<TypeStr value="iR-ADV 6765-Y3"/>
+						<TypeStr value="iR-ADV 6780-Y3"/>
+						<TypeStr value="iR-ADV 8705-Y3"/>
+						<TypeStr value="iR-ADV 8786-Y3"/>
+						<TypeStr value="iR-ADV 8795-Y3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6855"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6860"/>
+						<TypeStr value="iR-ADV 6870"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 6980"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 715"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 715 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8085"/>
+						<TypeStr value="iR-ADV 8095"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8285"/>
+						<TypeStr value="iR-ADV 8295"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8585"/>
+						<TypeStr value="iR-ADV 8595"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8585 III"/>
+						<TypeStr value="iR-ADV 8595 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8585 III-Y3"/>
+						<TypeStr value="iR-ADV 8595 III-Y3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8105-U1"/>
+						<TypeStr value="iR-ADV 8095-U1"/>
+						<TypeStr value="iR-ADV 8085-U1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8105"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8205-U2"/>
+						<TypeStr value="iR-ADV 8285-U2"/>
+						<TypeStr value="iR-ADV 8295-U2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8205"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8505-Y1"/>
+						<TypeStr value="iR-ADV 8585-Y1"/>
+						<TypeStr value="iR-ADV 8595-Y1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8505"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8505 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8505-Y2"/>
+						<TypeStr value="iR-ADV 8585-Y2"/>
+						<TypeStr value="iR-ADV 8595-Y2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8505 III-Y3"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8705"/>
+						<TypeStr value="iR-ADV 8786"/>
+						<TypeStr value="iR-ADV 8795"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV 8905"/>
+						<TypeStr value="iR-ADV 8986"/>
+						<TypeStr value="iR-ADV 8995"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR C3020"/>
+						<TypeStr value="iR C3025"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3320"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3320L"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3520"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3520 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3525"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3525 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3530"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3530 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2025"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2225"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2020"/>
+						<TypeStr value="iR-ADV C2030"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2020i"/>
+						<TypeStr value="iR-ADV C2030i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2020L"/>
+						<TypeStr value="iR-ADV C2030L"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2218"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C2220"/>
+						<TypeStr value="iR-ADV C2230"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3325"/>
+						<TypeStr value="iR-ADV C3330"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C250"/>
+						<TypeStr value="iR-ADV C350"/>
+						<TypeStr value="iR-ADV C350P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C255"/>
+						<TypeStr value="iR-ADV C355"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C256"/>
+						<TypeStr value="iR-ADV C356"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C256 III"/>
+						<TypeStr value="iR-ADV C356 III"/>
+						<TypeStr value="iR-ADV C356P III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C257"/>
+						<TypeStr value="iR-ADV C357"/>
+						<TypeStr value="iR-ADV C357P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C259"/>
+						<TypeStr value="iR-ADV C359"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C351"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3720"/>
+						<TypeStr value="iR-ADV C3725"/>
+						<TypeStr value="iR-ADV C3730"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3822"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3826"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3830"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3835"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C3922"/>
+						<TypeStr value="iR-ADV C3926"/>
+						<TypeStr value="iR-ADV C3930"/>
+						<TypeStr value="iR-ADV C3935"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C475 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C477"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C478"/>
+						<TypeStr value="iR-ADV C568"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5030"/>
+						<TypeStr value="iR-ADV C5035"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5235"/>
+						<TypeStr value="iR-ADV C5240"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5535"/>
+						<TypeStr value="iR-ADV C5540"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5535 III"/>
+						<TypeStr value="iR-ADV C5540 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5535 III-P2"/>
+						<TypeStr value="iR-ADV C5540 III-P2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5051-B1"/>
+						<TypeStr value="iR-ADV C5045-B1"/>
+						<TypeStr value="iR-ADV C5035-B1"/>
+						<TypeStr value="iR-ADV C5030-B1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5045"/>
+						<TypeStr value="iR-ADV C5051"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5250-B2"/>
+						<TypeStr value="iR-ADV C5255-B2"/>
+						<TypeStr value="iR-ADV C5235-B2"/>
+						<TypeStr value="iR-ADV C5240-B2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5250"/>
+						<TypeStr value="iR-ADV C5255"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5560-P1"/>
+						<TypeStr value="iR-ADV C5550-P1"/>
+						<TypeStr value="iR-ADV C5540-P1"/>
+						<TypeStr value="iR-ADV C5535-P1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5550"/>
+						<TypeStr value="iR-ADV C5560"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5550 III"/>
+						<TypeStr value="iR-ADV C5560 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5550 III-P2"/>
+						<TypeStr value="iR-ADV C5560 III-P2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5735"/>
+						<TypeStr value="iR-ADV C5740"/>
+						<TypeStr value="iR-ADV C5750"/>
+						<TypeStr value="iR-ADV C5760"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5735-P2"/>
+						<TypeStr value="iR-ADV C5740-P2"/>
+						<TypeStr value="iR-ADV C5750-P2"/>
+						<TypeStr value="iR-ADV C5760-P2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5840"/>
+						<TypeStr value="iR-ADV C5850"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5840-R1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5850-R1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5860"/>
+						<TypeStr value="iR-ADV C5870"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5860-R1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C5870-R1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7065-A1"/>
+						<TypeStr value="iR-ADV C7055-A1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7055"/>
+						<TypeStr value="iR-ADV C7065"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7580-N1"/>
+						<TypeStr value="iR-ADV C7570-N1"/>
+						<TypeStr value="iR-ADV C7565-N1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7565"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7565 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7565 III-N2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7260"/>
+						<TypeStr value="iR-ADV C7270"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7765"/>
+						<TypeStr value="iR-ADV C7770"/>
+						<TypeStr value="iR-ADV C7780"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7765-N2"/>
+						<TypeStr value="iR-ADV C7770-N2"/>
+						<TypeStr value="iR-ADV C7780-N2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9070-A1"/>
+						<TypeStr value="iR-ADV C9060-A1"/>
+						<TypeStr value="iR-ADV C9075-A1"/>
+						<TypeStr value="iR-ADV C9065-A1"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9060"/>
+						<TypeStr value="iR-ADV C9070"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9065"/>
+						<TypeStr value="iR-ADV C9075"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7260-A2"/>
+						<TypeStr value="iR-ADV C7270-A2"/>
+						<TypeStr value="iR-ADV C7280-A2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7280"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7580"/>
+						<TypeStr value="iR-ADV C7570"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7580 III"/>
+						<TypeStr value="iR-ADV C7570 III"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C7580 III-N2"/>
+						<TypeStr value="iR-ADV C7570 III-N2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9270-A2"/>
+						<TypeStr value="iR-ADV C9280-A2"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iR-ADV C9270"/>
+						<TypeStr value="iR-ADV C9280"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR1135-J200"/>
+						<TypeStr value="iPR1125-J200"/>
+						<TypeStr value="iPR1110-J200"/>
+						<TypeStr value="iPR1135-J100"/>
+						<TypeStr value="iPR1125-J100"/>
+						<TypeStr value="iPR1110-J100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR1135-K200"/>
+						<TypeStr value="iPR1125-K200"/>
+						<TypeStr value="iPR1110-K200"/>
+						<TypeStr value="iPR1135-K100"/>
+						<TypeStr value="iPR1125-K100"/>
+						<TypeStr value="iPR1110-K100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR1135"/>
+						<TypeStr value="iPR1125"/>
+						<TypeStr value="iPR1110"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C165"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C165-M10"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C170"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C170-M10"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C265"/>
+						<TypeStr value="iPR C270"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C265-M20"/>
+						<TypeStr value="iPR C270-M20"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C710"/>
+						<TypeStr value="iPR C810"/>
+						<TypeStr value="iPR C910"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C710-G250"/>
+						<TypeStr value="iPR C710CA-G250"/>
+						<TypeStr value="iPR C810-G250"/>
+						<TypeStr value="iPR C910-G250"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C600"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C600-G100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C6010"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C6010VP"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C60-G100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C650"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C65-G100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C65-G200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C650-G100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C650-G200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C7010VP"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C800"/>
+						<TypeStr value="iPR C700"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C800-G100"/>
+						<TypeStr value="iPR C700-G100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C850"/>
+						<TypeStr value="iPR C750"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C850-G100"/>
+						<TypeStr value="iPR C750-G100"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR C850-G200"/>
+						<TypeStr value="iPR C750-G200"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR V700"/>
+						<TypeStr value="iPR V800"/>
+						<TypeStr value="iPR V900"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iPR V700-P400"/>
+						<TypeStr value="iPR V800-P400"/>
+						<TypeStr value="iPR V900-P400"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon D1600 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF1238 II / 1238iF/i II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF1333C/C1333iF/i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF1440 / 1440iF/i"/>
+						<TypeStr value="MF460 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF1538C"/>
+						<TypeStr value="iC X C1538i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF1538C II"/>
+						<TypeStr value="iC X C1538i II"/>
+						<TypeStr value="i-SENSYS X C1538i II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF1643i II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon MF230 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon MF240 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon MF260 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF260 II Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF280 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF410 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF420 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF440 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF450 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF510 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF520 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF540 Series"/>
+						<TypeStr value="iR1643i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF550 Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF633C/635C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF643C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF645C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF650C Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF720C Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF735C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF732C/734C/735C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF742C/744C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF745C/746C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF750C Series"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF9220"/>
+						<TypeStr value="MF9280"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF810"/>
+						<TypeStr value="MF820"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF830C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF832C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="MF842C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="iC X C1533i II"/>
+						<TypeStr value="i-SYENSYS X C1533i II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="i-SENSYS X C1533P II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="i-SENSYS X C1936P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon D570"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="Canon LBP161/LBP162"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1127C / C1127P"/>
+						<TypeStr value="MF1127C / C1127iF/i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1238 / 1238P/Pr"/>
+						<TypeStr value="MF1238 / 1238iF/i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1238 II / 1238P/Pr II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1333C / C1333P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1440 / 1440P/Pr"/>
+						<TypeStr value="LBP242/243"/>
+						<TypeStr value="LBP245/246/248"/>
+						<TypeStr value="LBP247"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1533C"/>
+						<TypeStr value="i-SENSYS X C1533P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1538C"/>
+						<TypeStr value="i-SENSYS X C1538P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1538C II"/>
+						<TypeStr value="i-SENSYS X C1538P II"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP171_172"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP1861"/>
+						<TypeStr value="LBP1871"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP211"/>
+						<TypeStr value="LBP212"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP213"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP214"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP215"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP228"/>
+						<TypeStr value="LBP227"/>
+						<TypeStr value="LBP226"/>
+						<TypeStr value="LBP225"/>
+						<TypeStr value="LBP223"/>
+						<TypeStr value="LBP222"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP233"/>
+						<TypeStr value="LBP236"/>
+						<TypeStr value="LBP237"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP251"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP8750"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP252"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP253"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP312dn"/>
+						<TypeStr value="LBP312x"/>
+						<TypeStr value="LBP311x"/>
+						<TypeStr value="LBP310x"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP324x"/>
+						<TypeStr value="LBP325dn"/>
+						<TypeStr value="LBP325x"/>
+						<TypeStr value="iR1643P"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP351dn"/>
+						<TypeStr value="LBP352dn"/>
+						<TypeStr value="LBP351x"/>
+						<TypeStr value="LBP352x"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP361i"/>
+						<TypeStr value="LBP362i"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP451"/>
+						<TypeStr value="LBP452"/>
+						<TypeStr value="LBP453"/>
+						<TypeStr value="LBP458"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP461"/>
+						<TypeStr value="LBP462"/>
+						<TypeStr value="LBP463i"/>
+						<TypeStr value="LBP468"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP612C/613C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP623C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP633C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP652C/654C"/>
+						<TypeStr value="LBP653C/654C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP663C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP664C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP6650"/>
+						<TypeStr value="LBP3470"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP6670"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP6680"/>
+						<TypeStr value="LBP3480"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP673C"/>
+						<TypeStr value="LBP674C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP6750"/>
+						<TypeStr value="LBP3560"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP6780"/>
+						<TypeStr value="LBP3580"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP8780"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP8900"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP7660C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP7680C"/>
+						<TypeStr value="LBP5280"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP843Cx"/>
+						<TypeStr value="LBP841Cdn"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP710Cx"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP7780C"/>
+						<TypeStr value="LBP5480"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP712Cdn"/>
+						<TypeStr value="LBP712Cx"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP720C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP722C"/>
+						<TypeStr value="LBP722Ci"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP730C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP732C"/>
+						<TypeStr value="LBP732Ci"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP811C"/>
+						<TypeStr value="LBP812Ci"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP852Ci"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP853Ci"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP861C"/>
+						<TypeStr value="LBP862C"/>
+						<TypeStr value="LBP863C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP961C"/>
+					</matchingTypeStrs>
+				</device>
+
+				<device name="Canon Generic Plus PCL6">
+					<matchingTypeStrs name="devTypeOID">
+						<TypeStr value="LBP9950C"/>
+						<TypeStr value="LBP9900C"/>
+					</matchingTypeStrs>
+				</device>
+
+			</deviceList>
+		</method>
+	</methodList>
+</discovery>
